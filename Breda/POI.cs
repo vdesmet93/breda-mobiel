@@ -7,5 +7,6 @@ namespace View
 {
     public class POI
     {
+        
     }
 }
