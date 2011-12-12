@@ -1,0 +1,17 @@
+C:\Users\Vincent\Desktop\Breda\Breda\Bin\Debug\ApplicationIcon.png
+C:\Users\Vincent\Desktop\Breda\Breda\Bin\Debug\Background.png
+C:\Users\Vincent\Desktop\Breda\Breda\Bin\Debug\Breda.dll
+C:\Users\Vincent\Desktop\Breda\Breda\Bin\Debug\Breda.pdb
+C:\Users\Vincent\Desktop\Breda\Breda\Bin\Debug\AppManifest.xaml
+C:\Users\Vincent\Desktop\Breda\Breda\Bin\Debug\Breda.xap
+C:\Users\Vincent\Desktop\Breda\Breda\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Vincent\Desktop\Breda\Breda\obj\Debug\App.g.i.cs
+C:\Users\Vincent\Desktop\Breda\Breda\obj\Debug\Breda.g.resources
+C:\Users\Vincent\Desktop\Breda\Breda\obj\Debug\Breda.dll
+C:\Users\Vincent\Desktop\Breda\Breda\obj\Debug\Breda.pdb
+C:\Users\Vincent\Desktop\Breda\Breda\obj\Debug\XapCacheFile.xml
+C:\Users\Vincent\Desktop\Breda\Breda\obj\Debug\MainMenu.g.i.cs
+C:\Users\Vincent\Desktop\Breda\Breda\obj\Debug\SplashScreen.g.i.cs
+C:\Users\Vincent\Desktop\Breda\Breda\obj\Debug\HelpView.g.i.cs
+C:\Users\Vincent\Desktop\Breda\Breda\obj\Debug\MapView.g.i.cs
+C:\Users\Vincent\Desktop\Breda\Breda\obj\Debug\ThemeChooser.g.i.cs
