@@ -14,5 +14,26 @@ namespace Model
     public class FileManager
     {
 
+        public FileManager()
+        {
+            
+        }
+
+        public void createDatabase()
+        {
+
+        }
+
+        public string Load(String path)
+        {
+
+            // no data found, returning empty string
+            return "";
+        }
+        public bool Save(String location, String path)
+        {
+
+            return false;
+        }
     }
 }
