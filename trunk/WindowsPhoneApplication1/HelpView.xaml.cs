@@ -17,7 +17,7 @@ namespace View
     {
         public HelpView()
         {
-            InitializeComponent();
+           // InitializeComponent();
         }
     }
 }

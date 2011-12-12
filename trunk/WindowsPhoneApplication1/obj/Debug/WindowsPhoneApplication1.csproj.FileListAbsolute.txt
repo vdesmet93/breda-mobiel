@@ -11,3 +11,19 @@ C:\Users\Luttik\Documents\Visual Studio 2010\Projects\Breda Mobiel\WindowsPhoneA
 C:\Users\Luttik\Documents\Visual Studio 2010\Projects\Breda Mobiel\WindowsPhoneApplication1\obj\Debug\WindowsPhoneApplication1.pdb
 C:\Users\Luttik\Documents\Visual Studio 2010\Projects\Breda Mobiel\WindowsPhoneApplication1\obj\Debug\XapCacheFile.xml
 C:\Users\Luttik\Documents\Visual Studio 2010\Projects\Breda Mobiel\WindowsPhoneApplication1\obj\Debug\SplashScreen.g.i.cs
+C:\Users\Vincent\Desktop\BredaMobiel\WindowsPhoneApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Vincent\Desktop\BredaMobiel\WindowsPhoneApplication1\obj\Debug\App.g.i.cs
+C:\Users\Vincent\Desktop\BredaMobiel\WindowsPhoneApplication1\obj\Debug\HelpView.g.i.cs
+C:\Users\Vincent\Desktop\BredaMobiel\WindowsPhoneApplication1\obj\Debug\MapView.g.i.cs
+C:\Users\Vincent\Desktop\BredaMobiel\WindowsPhoneApplication1\obj\Debug\SplashScreen.g.i.cs
+C:\Users\Vincent\Desktop\BredaMobiel\WindowsPhoneApplication1\obj\Debug\ThemeChooser.g.i.cs
+C:\Users\Vincent\Desktop\BredaMobiel\WindowsPhoneApplication1\obj\Debug\WindowsPhoneApplication1.g.resources
+C:\Users\Vincent\Desktop\BredaMobiel\WindowsPhoneApplication1\obj\Debug\WindowsPhoneApplication1.dll
+C:\Users\Vincent\Desktop\BredaMobiel\WindowsPhoneApplication1\Bin\Debug\ApplicationIcon.png
+C:\Users\Vincent\Desktop\BredaMobiel\WindowsPhoneApplication1\Bin\Debug\Background.png
+C:\Users\Vincent\Desktop\BredaMobiel\WindowsPhoneApplication1\Bin\Debug\WindowsPhoneApplication1.dll
+C:\Users\Vincent\Desktop\BredaMobiel\WindowsPhoneApplication1\Bin\Debug\WindowsPhoneApplication1.pdb
+C:\Users\Vincent\Desktop\BredaMobiel\WindowsPhoneApplication1\obj\Debug\WindowsPhoneApplication1.pdb
+C:\Users\Vincent\Desktop\BredaMobiel\WindowsPhoneApplication1\Bin\Debug\AppManifest.xaml
+C:\Users\Vincent\Desktop\BredaMobiel\WindowsPhoneApplication1\Bin\Debug\WindowsPhoneApplication1.xap
+C:\Users\Vincent\Desktop\BredaMobiel\WindowsPhoneApplication1\obj\Debug\XapCacheFile.xml

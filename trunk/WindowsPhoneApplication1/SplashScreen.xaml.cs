@@ -18,7 +18,7 @@ namespace View
         // Constructor
         public MainPage()
         {
-            InitializeComponent();
+          //  InitializeComponent();
         }
     }
 }

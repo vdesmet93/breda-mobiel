@@ -17,7 +17,7 @@ namespace View
     {
         public MapView()
         {
-            InitializeComponent();
+          //  InitializeComponent();
         }
     }
 }

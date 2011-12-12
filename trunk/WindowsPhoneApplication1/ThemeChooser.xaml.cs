@@ -17,7 +17,7 @@ namespace View
     {
         public ThemeChooser()
         {
-            InitializeComponent();
+        //    InitializeComponent();
         }
     }
 }
