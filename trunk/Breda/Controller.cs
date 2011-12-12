@@ -8,6 +8,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using View;
 
 namespace Controller
 {
@@ -21,42 +22,42 @@ namespace Controller
 
         }
 
-        public calcSpecifications(POI tohere)
+        public void calcSpecifications(POI tohere)
         {
 
         }
 
-        public changePOIColor()
+        public void changePOIColor()
         {
 
         }
 
-        public generateRoute(POI newloc)
+        public void generateRoute(POI newloc)
         {
 
         }
 
-        public getHelpData()
+        public void getHelpData()
         {
 
         }
 
-        public getInfo(POI info)
+        public void getInfo(POI info)
         {
 
         }
 
-        public getMap()
+        public void getMap()
         {
 
         }
 
-        private correctRoute()
+        private void correctRoute()
         {
 
         }
 
-        private detectPOI()
+        private void detectPOI()
         {
 
         }
