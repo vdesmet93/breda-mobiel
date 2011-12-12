@@ -20,5 +20,34 @@ namespace View
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+
+            NavigationService.Navigate(new Uri("/MapView.xaml", UriKind.Relative));
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/MapView.xaml", UriKind.Relative));
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/ThemeChooser.xaml", UriKind.Relative));
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/HelpView.xaml", UriKind.Relative));
+        }
+
+
+      
     }
 }
