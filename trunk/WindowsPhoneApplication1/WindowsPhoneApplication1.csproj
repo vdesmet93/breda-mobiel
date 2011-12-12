@@ -60,17 +60,41 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu.xaml.cs">
-      <DependentUpon>MainMenu.xaml</DependentUpon>
+    <Compile Include="Controller.cs" />
+    <Compile Include="FileManager.cs" />
+    <Compile Include="HelpView.xaml.cs">
+      <DependentUpon>HelpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs" />
+    <Compile Include="MapView.xaml.cs">
+      <DependentUpon>MapView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.xaml.cs">
+      <DependentUpon>SplashScreen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemeChooser.xaml.cs">
+      <DependentUpon>ThemeChooser.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="MainMenu.xaml">
+    <Page Include="HelpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SplashScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThemeChooser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
