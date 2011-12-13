@@ -15,6 +15,7 @@ namespace View
 {
     public partial class SplashScreen : PhoneApplicationPage
     {
+        MainMenu menu = new MainMenu();
         public SplashScreen()
         {
             InitializeComponent();

@@ -15,6 +15,8 @@ namespace View
 {
     public partial class MapView : PhoneApplicationPage
     {
+        HelpView help = new HelpView();
+
         public MapView()
         {
             InitializeComponent();
@@ -29,5 +31,10 @@ namespace View
         {
             NavigationService.GoBack();
         }
+        private void POI_Tap()
+        {
+ 
+        }
+
     }
 }

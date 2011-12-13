@@ -17,6 +17,10 @@ namespace View
     public partial class MainMenu : PhoneApplicationPage
     {
         // Constructor
+        MapView map = new MapView();
+        HelpView help = new HelpView();
+        ThemeChooser theme = new ThemeChooser(); 
+
         public MainMenu()
         {
             InitializeComponent();

@@ -17,6 +17,8 @@ namespace Breda
 {
     public partial class App : Application
     {
+        View.SplashScreen splashScreen = new View.SplashScreen();
+
         private Controller.Controller control;
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
