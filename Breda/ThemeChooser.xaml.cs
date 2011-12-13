@@ -16,6 +16,7 @@ namespace View
     public partial class ThemeChooser : PhoneApplicationPage
     {
         MapView map = new MapView();
+        String Theme = "";
 
         public ThemeChooser()
         {
@@ -34,17 +35,22 @@ namespace View
 
         private void historisbutton_Click(object sender, RoutedEventArgs e)
         {
-
+            SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
+            sBrush.Color = Colors.Blue;
         }
 
         private void uitgangbutton_Click(object sender, RoutedEventArgs e)
         {
-
+            SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
+            sBrush.Color = Colors.Red;;
         }
 
         private void okbutton_Click(object sender, RoutedEventArgs e)
         {
-
+            if(Theme!="")
+            {
+                NavigationService.Navigate(new Uri("/MapView.xaml", UriKind.Relative));
+            }
         }
     }
 }
