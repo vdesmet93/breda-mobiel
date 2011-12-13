@@ -39,7 +39,7 @@ namespace View
 
         private void button4_Click(object sender, RoutedEventArgs e)
         {
-
+            throw new ArgumentNullException("Fuck Off!");
         }
 
         private void button5_Click(object sender, RoutedEventArgs e)
