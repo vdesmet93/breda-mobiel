@@ -9,7 +9,6 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using View;
-using Breda;
 
 namespace Controller
 {
@@ -17,6 +16,7 @@ namespace Controller
     {
         private Breda.App bredamobiel;
         private Model.FileManager fileIO;
+        //private POI[] POIs = new POI[] { new POI(51.3, 19.2, ""), new POI(51.3, 19.2, ""), new POI(51.3, 19.2, "") };
 
         public Controller(Breda.App breda)
         {
