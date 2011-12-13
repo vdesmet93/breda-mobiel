@@ -12,11 +12,12 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-
+using Controller;
 namespace Breda
 {
     public partial class App : Application
     {
+        private Controller.Controller control;
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>
@@ -63,6 +64,7 @@ namespace Breda
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            control = new Controller.Controller(this);
         }
 
         // Code to execute when the application is activated (brought to foreground)
