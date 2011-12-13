@@ -15,10 +15,13 @@ namespace View
 {
     public partial class MapView : PhoneApplicationPage
     {
-        HelpView help = new HelpView();
+        private Breda.App bredamobiel;
+        HelpView help;
 
-        public MapView()
+        public MapView(Breda.App breda)
         {
+            bredamobiel = breda;
+            help = new HelpView(breda.getControl().getFileIO());
             InitializeComponent();
         }
 

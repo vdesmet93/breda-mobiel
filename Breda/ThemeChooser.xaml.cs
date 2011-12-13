@@ -15,11 +15,14 @@ namespace View
 {
     public partial class ThemeChooser : PhoneApplicationPage
     {
-        MapView map = new MapView();
+        private Breda.App bredamobiel;
+        MapView map;
         String Theme = "";
 
-        public ThemeChooser()
+        public ThemeChooser(Breda.App breda)
         {
+            bredamobiel = breda;
+            map = new MapView(breda);
             InitializeComponent();
         }
 

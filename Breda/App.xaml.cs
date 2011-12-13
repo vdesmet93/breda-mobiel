@@ -17,7 +17,7 @@ namespace Breda
 {
     public partial class App : Application
     {
-        View.SplashScreen splashScreen = new View.SplashScreen();
+        View.SplashScreen splashScreen;
 
         private Controller.Controller control;
         /// <summary>
@@ -66,6 +66,7 @@ namespace Breda
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            splashScreen = new View.SplashScreen(this);
             control = new Controller.Controller(this);
         }
 
@@ -105,6 +106,11 @@ namespace Breda
                 // An unhandled exception has occurred; break into the debugger
                 System.Diagnostics.Debugger.Break();
             }
+        }
+
+        public Controller.Controller getControl()
+        {
+            return control;
         }
 
         #region Phone application initialization

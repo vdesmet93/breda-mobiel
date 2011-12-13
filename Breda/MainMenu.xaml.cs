@@ -17,12 +17,17 @@ namespace View
     public partial class MainMenu : PhoneApplicationPage
     {
         // Constructor
-        MapView map = new MapView();
-        HelpView help = new HelpView();
-        ThemeChooser theme = new ThemeChooser(); 
+        private Breda.App bredamobiel;
+        MapView map;
+        HelpView help;
+        ThemeChooser theme;
 
-        public MainMenu()
+        public MainMenu(Breda.App breda)
         {
+            bredamobiel = breda;
+            theme = new ThemeChooser(breda);
+            map = new MapView(breda);
+            help = new HelpView(breda.getControl().getFileIO());
             InitializeComponent();
         }
 

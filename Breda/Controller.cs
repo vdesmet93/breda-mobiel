@@ -102,5 +102,10 @@ namespace Controller
         {
 
         }
+
+        public Model.FileManager getFileIO()
+        {
+            return fileIO;
+        }
     }
 }
