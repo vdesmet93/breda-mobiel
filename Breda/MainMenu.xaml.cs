@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using System.Threading;
 
 namespace View
 {
@@ -40,6 +41,7 @@ namespace View
         private void button4_Click(object sender, RoutedEventArgs e)
         {
             throw new ArgumentNullException("Fuck Off!");
+            //Thread.CurrentThread.Abort();
         }
 
         private void button5_Click(object sender, RoutedEventArgs e)
