@@ -7,15 +7,15 @@ namespace View
 {
     public class POI
     {
-        public Double lengte;
-        public Double breedte;
+        public Double lengteGraad;
+        public Double breedteGraad;
         public String info;
 
-        public POI(Double l, Double b)
+        public POI(Double l, Double b, String i)
         {
-            this.lengte = l;
-            this.breedte = b;
-
+            this.lengteGraad = l;
+            this.breedteGraad = b;
+            this.info = i;
         }
     }
 }
