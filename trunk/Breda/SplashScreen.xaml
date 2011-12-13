@@ -25,15 +25,16 @@
             <TextBlock x:Name="ApplicationTitle" Text="Breda Tour" Style="{StaticResource PhoneTextNormalStyle}" Width="444" />
             <TextBlock x:Name="PageTitle" Text="" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
-
+        <Image Source="/Breda;component/SplashScreen.png" Stretch="UniformToFill" Grid.RowSpan="2" />
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button Content="Skip" Height="72" HorizontalAlignment="Left" Margin="21,497,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
-            <Button Content="Home" Height="72" HorizontalAlignment="Left" Margin="268,497,0,0" Name="button2" VerticalAlignment="Top" Width="160" Click="button2_Click" />
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="299*" />
+                <ColumnDefinition Width="157*" />
+            </Grid.ColumnDefinitions>
+            <Button Content="Help" Height="72" HorizontalAlignment="Left" Margin="28,618,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
+            <Button Content="Home" Height="72" HorizontalAlignment="Left" Margin="252,618,0,0" Name="button2" VerticalAlignment="Top" Width="160" Click="button2_Click" Grid.ColumnSpan="2" />
         </Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Breda;component/SplashScreen.png" Stretch="UniformToFill" />
-        </Grid.Background>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->
