@@ -26,29 +26,54 @@ namespace View
         {
             InitializeComponent();
         }
-        
 
+
+        /// <summary>
+        /// Handles the Click event of the button1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void button1_Click(object sender, RoutedEventArgs e)
         {
 
             NavigationService.Navigate(new Uri("/MapView.xaml", UriKind.Relative));
         }
 
+        /// <summary>
+        /// Handles the Click event of the button2 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/MapView.xaml", UriKind.Relative));
         }
 
+        /// <summary>
+        /// Handles the Click event of the button3 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/ThemeChooser.xaml", UriKind.Relative));
         }
 
+        /// <summary>
+        /// Handles the Click event of the button4 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void button4_Click(object sender, RoutedEventArgs e)
         {
             throw new ArgumentNullException("Fuck off!");
         }
 
+        /// <summary>
+        /// Handles the Click event of the button5 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void button5_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/HelpView.xaml", UriKind.Relative));
