@@ -13,6 +13,7 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Controller;
+using System.ComponentModel;
 namespace Breda
 {
     public partial class App : Application
@@ -151,6 +152,8 @@ namespace Breda
         {
             return control;
         }
+
+        
 
         #region Phone application initialization
 

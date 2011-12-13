@@ -51,6 +51,7 @@
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Controls.Maps, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e" />
     <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="system.data.linq" />
     <Reference Include="System.Device" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -60,6 +61,7 @@
     <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
     <Reference Include="mscorlib.extensions" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="VoorbeeldNavigatie">
       <HintPath>..\..\..\Downloads\voorbeelden les 3\voorbeelden les 3\VoorbeeldNavigatie\Bin\Debug\VoorbeeldNavigatie.dll</HintPath>
     </Reference>
@@ -69,6 +71,8 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controller.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="DatabaseTable.cs" />
     <Compile Include="FileManager.cs" />
     <Compile Include="HelpView.xaml.cs">
       <DependentUpon>HelpView.xaml</DependentUpon>
