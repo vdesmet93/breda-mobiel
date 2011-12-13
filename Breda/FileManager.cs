@@ -13,10 +13,11 @@ namespace Model
 {
     public class FileManager
     {
+        private Breda.App bredamobiel;
 
-        public FileManager()
+        public FileManager(Breda.App breda)
         {
-
+            bredamobiel = breda;
         }
 
         /// <summary>
@@ -27,7 +28,6 @@ namespace Model
         /// <returns>true if data is saved successfully, otherwise false</returns>
         public bool Save(string location, string data)
         {
-
             // failed to save data
             return false;
         }
@@ -38,7 +38,6 @@ namespace Model
         /// <returns>The loaded data</returns>
         public string Load(string location)
         {
-
             // no data
             return "";
         }
