@@ -15,6 +15,7 @@ namespace Controller
 {
     public class Controller
     {
+
         GeoCoordinateWatcher watcher;
         private Breda.App bredamobiel;
         private Model.FileManager fileIO;
@@ -24,11 +25,15 @@ namespace Controller
         public double latitude { get; private set; }
         public double longtitude { get; private set; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Controller"/> class.
+        /// </summary>
+        /// <param name="breda">The breda.</param>
         public Controller(Breda.App breda)
         {
             
             bredamobiel = breda;
-            fileIO = new Model.FileManager(breda);
+            fileIO = new Model.FileManager();
 
             hasLocation = false;
             watcher = new GeoCoordinateWatcher(GeoPositionAccuracy.Default)
@@ -40,7 +45,12 @@ namespace Controller
             watcher.StatusChanged += this.watcher_StatusChanged;
             watcher.Start();
         }
-            
+
+        /// <summary>
+        /// Handles the StatusChanged event of the watcher control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Device.Location.GeoPositionStatusChangedEventArgs"/> instance containing the event data.</param>
         private void watcher_StatusChanged(object sender, GeoPositionStatusChangedEventArgs e)
         {
             switch (e.Status)
@@ -56,6 +66,11 @@ namespace Controller
             }
         }
 
+        /// <summary>
+        /// Handles the PositionChanged event of the watcher control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Device.Location.GeoPositionChangedEventArgs&lt;System.Device.Location.GeoCoordinate&gt;"/> instance containing the event data.</param>
         private void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
         {
             hasLocation = true;
@@ -63,31 +78,55 @@ namespace Controller
             latitude = epl.Latitude;
             latitude = epl.Longitude;
         }
+        /// <summary>
+        /// Calcs the specifications.
+        /// </summary>
+        /// <param name="tohere">The tohere.</param>
         public void calcSpecifications(POI tohere)
         {
 
         }
 
+        /// <summary>
+        /// Changes the color of the POI.
+        /// </summary>
         public void changePOIColor()
         {
 
         }
 
+        /// <summary>
+        /// Generates the route.
+        /// </summary>
+        /// <param name="newloc">The newloc.</param>
         public void generateRoute(POI newloc)
         {
 
         }
 
+        /// <summary>
+        /// Gets the help data.
+        /// </summary>
+        /// <returns></returns>
         public string getHelpData()
         {
             return "";
         }
 
+        /// <summary>
+        /// Gets the info.
+        /// </summary>
+        /// <param name="info">The info.</param>
+        /// <returns></returns>
         public string getInfo(POI info)
         {
             return "";
         }
 
+        /// <summary>
+        /// Gets the map.
+        /// </summary>
+        /// <returns></returns>
         public Object getMap()
         {
             return null;
@@ -103,7 +142,11 @@ namespace Controller
 
         }
 
-        public Model.FileManager getFileIO()
+        /// <summary>
+        /// Gets the file IO.
+        /// </summary>
+        /// <returns></returns>
+        internal object getFileIO()
         {
             return fileIO;
         }
