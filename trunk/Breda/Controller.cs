@@ -20,7 +20,7 @@ namespace Controller
         public Controller(Breda.App breda)
         {
             bredamobiel = breda;
-            fileIO = new Model.FileManager();
+            fileIO = new Model.FileManager(breda);
         }
 
         public void calcSpecifications(POI tohere)
