@@ -15,6 +15,8 @@ namespace View
 {
     public partial class ThemeChooser : PhoneApplicationPage
     {
+        MapView map = new MapView();
+
         public ThemeChooser()
         {
             InitializeComponent();
@@ -28,6 +30,21 @@ namespace View
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
+        }
+
+        private void historisbutton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void uitgangbutton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void okbutton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
