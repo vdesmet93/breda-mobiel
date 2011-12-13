@@ -16,9 +16,9 @@ namespace Model
         private String path;
         private Breda.App bredamobiel;
 
-        public FileManager(Breda.App breda)
+        public FileManager()
         {
-            bredamobiel = breda;
+            bredamobiel = Breda.App.app;
         }
 
         /// <summary>
