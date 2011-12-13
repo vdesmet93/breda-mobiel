@@ -44,7 +44,7 @@ namespace View
 
         private void button4_Click(object sender, RoutedEventArgs e)
         {
-            throw new ArgumentNullException("Fuck Off!");
+            
             //Thread.CurrentThread.Abort();
         }
 
