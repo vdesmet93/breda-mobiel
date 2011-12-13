@@ -17,9 +17,10 @@ namespace Controller
         private Breda.App bredamobiel;
         private Model.FileManager fileIO;
 
-        public Controller()
+        public Controller(Breda.App breda)
         {
-
+            bredamobiel = breda;
+            fileIO = new Model.FileManager();
         }
 
         public void calcSpecifications(POI tohere)
@@ -37,24 +38,24 @@ namespace Controller
 
         }
 
-        public void getHelpData()
+        public string getHelpData()
         {
-
+            return "";
         }
 
-        public void getInfo(POI info)
+        public string getInfo(POI info)
         {
-
+            return "";
         }
 
-        public void getMap()
+        public Object getMap()
         {
-
+            return null;
         }
 
-        private void correctRoute()
+        private Boolean correctRoute()
         {
-
+            return false;
         }
 
         private void detectPOI()
