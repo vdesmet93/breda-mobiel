@@ -15,9 +15,18 @@ namespace View
 {
     public partial class HelpView : PhoneApplicationPage
     {
-        public HelpView()
+        private Model.FileManager fileIO;
+
+        public HelpView(Model.FileManager io)
         {
             InitializeComponent();
+            fileIO = io;
+            showHelp();
+        }
+
+        private void showHelp()
+        {
+
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

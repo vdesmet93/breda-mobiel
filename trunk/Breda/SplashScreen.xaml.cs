@@ -15,9 +15,12 @@ namespace View
 {
     public partial class SplashScreen : PhoneApplicationPage
     {
-        MainMenu menu = new MainMenu();
-        public SplashScreen()
+        private Breda.App bredamobiel;
+        MainMenu menu;
+        public SplashScreen(Breda.App breda)
         {
+            bredamobiel = breda;
+            menu = new MainMenu(breda);
             InitializeComponent();
         }
 
