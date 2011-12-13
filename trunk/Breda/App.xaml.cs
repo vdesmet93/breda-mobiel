@@ -19,7 +19,7 @@ namespace Breda
     {
         View.SplashScreen splashScreen;
 
-        private Controller.Controller control;
+        public static Controller.Controller control { get; private set; }
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>
@@ -31,6 +31,7 @@ namespace Breda
         /// </summary>
         public App()
         {
+            
             // Global handler for uncaught exceptions. 
             UnhandledException += Application_UnhandledException;
 
@@ -60,35 +61,64 @@ namespace Breda
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
 
+            
+
         }
 
         // Code to execute when the application is launching (eg, from Start)
         // This code will not execute when the application is reactivated
+        /// <summary>
+        /// Handles the Launching event of the Application control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="Microsoft.Phone.Shell.LaunchingEventArgs"/> instance containing the event data.</param>
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
-            splashScreen = new View.SplashScreen(this);
+            splashScreen = new View.SplashScreen();
             control = new Controller.Controller(this);
+            splashScreen = new View.SplashScreen();
+            
         }
 
         // Code to execute when the application is activated (brought to foreground)
         // This code will not execute when the application is first launched
+        /// <summary>
+        /// Handles the Activated event of the Application control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="Microsoft.Phone.Shell.ActivatedEventArgs"/> instance containing the event data.</param>
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
         }
 
         // Code to execute when the application is deactivated (sent to background)
         // This code will not execute when the application is closing
+        /// <summary>
+        /// Handles the Deactivated event of the Application control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="Microsoft.Phone.Shell.DeactivatedEventArgs"/> instance containing the event data.</param>
         private void Application_Deactivated(object sender, DeactivatedEventArgs e)
         {
         }
 
         // Code to execute when the application is closing (eg, user hit Back)
         // This code will not execute when the application is deactivated
+        /// <summary>
+        /// Handles the Closing event of the Application control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="Microsoft.Phone.Shell.ClosingEventArgs"/> instance containing the event data.</param>
         private void Application_Closing(object sender, ClosingEventArgs e)
         {
         }
 
         // Code to execute if a navigation fails
+        /// <summary>
+        /// Handles the NavigationFailed event of the RootFrame control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.Navigation.NavigationFailedEventArgs"/> instance containing the event data.</param>
         private void RootFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
         {
             if (System.Diagnostics.Debugger.IsAttached)
@@ -99,6 +129,11 @@ namespace Breda
         }
 
         // Code to execute on Unhandled Exceptions
+        /// <summary>
+        /// Handles the UnhandledException event of the Application control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.ApplicationUnhandledExceptionEventArgs"/> instance containing the event data.</param>
         private void Application_UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)
         {
             if (System.Diagnostics.Debugger.IsAttached)
@@ -108,6 +143,10 @@ namespace Breda
             }
         }
 
+        /// <summary>
+        /// Gets the control.
+        /// </summary>
+        /// <returns></returns>
         public Controller.Controller getControl()
         {
             return control;
