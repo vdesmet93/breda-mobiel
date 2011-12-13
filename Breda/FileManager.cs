@@ -14,11 +14,10 @@ namespace Model
     public class FileManager
     {
         private String path;
-        private Breda.App bredamobiel;
 
         public FileManager()
         {
-            bredamobiel = Breda.App.app;
+            
         }
 
         /// <summary>
