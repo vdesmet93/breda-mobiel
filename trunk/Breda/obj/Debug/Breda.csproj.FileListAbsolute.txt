@@ -68,3 +68,20 @@ C:\Users\Rens\Desktop\Breda Tour SVN\Breda\obj\Debug\Breda.pdb
 C:\Users\Rens\Desktop\Breda Tour SVN\Breda\Bin\Debug\AppManifest.xaml
 C:\Users\Rens\Desktop\Breda Tour SVN\Breda\Bin\Debug\Breda.xap
 C:\Users\Rens\Desktop\Breda Tour SVN\Breda\obj\Debug\XapCacheFile.xml
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\ApplicationIcon.png
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\Background.png
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\Breda.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\Breda.pdb
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\AppManifest.xaml
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\Breda.xap
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\obj\Debug\App.g.i.cs
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\obj\Debug\HelpView.g.i.cs
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\obj\Debug\MainMenu.g.i.cs
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\obj\Debug\MapView.g.i.cs
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\obj\Debug\SplashScreen.g.i.cs
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\obj\Debug\ThemeChooser.g.i.cs
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\obj\Debug\Breda.g.resources
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\obj\Debug\Breda.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\obj\Debug\Breda.pdb
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\obj\Debug\XapCacheFile.xml
