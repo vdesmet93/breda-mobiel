@@ -1,9 +1,8 @@
-﻿<xapCache source="C:\Users\Rens\Desktop\Breda Tour SVN\Breda\Bin\Debug\Breda.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="13-12-2011 9:51:06">
-  <file source="C:\Users\Rens\Desktop\Breda Tour SVN\Breda\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="12-12-2011 14:41:13" />
-  <file source="C:\Users\Rens\Desktop\Breda Tour SVN\Breda\Background.png" archivePath="Background.png" lastWriteTime="12-12-2011 14:41:14" />
-  <file source="C:\Users\Rens\Desktop\Breda Tour SVN\Breda\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="12-12-2011 14:41:14" />
-  <file source="C:\Users\Rens\Desktop\Breda Tour SVN\Breda\obj\Debug\Breda.dll" archivePath="Breda.dll" lastWriteTime="13-12-2011 9:51:05" />
-  <file source="C:\Users\Rens\Downloads\voorbeelden les 3\voorbeelden les 3\VoorbeeldNavigatie\Bin\Debug\VoorbeeldNavigatie.dll" archivePath="VoorbeeldNavigatie.dll" lastWriteTime="12-12-2011 14:13:34" />
-  <file source="C:\Users\Rens\Desktop\Breda Tour SVN\Breda\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="12-12-2011 14:41:14" />
-  <file source="C:\Users\Rens\Desktop\Breda Tour SVN\Breda\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="12-12-2011 14:43:51" />
+﻿<xapCache source="C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\Breda.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="13-12-2011 9:57:31">
+  <file source="C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="13-12-2011 9:56:18" />
+  <file source="C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Background.png" archivePath="Background.png" lastWriteTime="13-12-2011 9:56:20" />
+  <file source="C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="13-12-2011 9:56:20" />
+  <file source="C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\obj\Debug\Breda.dll" archivePath="Breda.dll" lastWriteTime="13-12-2011 9:57:30" />
+  <file source="C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="13-12-2011 9:56:20" />
+  <file source="C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="13-12-2011 9:57:31" />
 </xapCache>
