@@ -22,15 +22,11 @@ namespace View
         HelpView help = new HelpView();
         ThemeChooser theme = new ThemeChooser();
 
-        public MainMenu(Breda.App breda)
+        public MainMenu()
         {
-         
             InitializeComponent();
         }
-        public MainMenu(Breda.App breda)
-        {
-            bredamobiel = breda;
-        }
+        
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
@@ -50,8 +46,7 @@ namespace View
 
         private void button4_Click(object sender, RoutedEventArgs e)
         {
-            
-            //Thread.CurrentThread.Abort();
+            throw new ArgumentNullException("Fuck off!");
         }
 
         private void button5_Click(object sender, RoutedEventArgs e)
