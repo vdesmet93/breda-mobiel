@@ -54,6 +54,7 @@ namespace View
         {
             SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
             sBrush.Color = Colors.Blue;
+            Theme = "historis";
         }
 
         /// <summary>
@@ -64,7 +65,20 @@ namespace View
         private void uitgangbutton_Click(object sender, RoutedEventArgs e)
         {
             SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
-            sBrush.Color = Colors.Red;;
+            sBrush.Color = Colors.Red;
+            Theme = "uitgang";
+        }
+
+        /// <summary>
+        /// Handles the Click event of the Allebutton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        private void Allebutton_Click(object sender, RoutedEventArgs e)
+        {
+            SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
+            sBrush.Color = Colors.White;
+            Theme = "Alle";
         }
 
         /// <summary>
