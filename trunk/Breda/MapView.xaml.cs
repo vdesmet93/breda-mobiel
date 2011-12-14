@@ -29,6 +29,22 @@ namespace View
         }
 
         /// <summary>
+        /// shows the POICanvas
+        /// </summary>
+        public void showPOICanvas()
+        {
+            POICanvas.Visibility = Visibility.Visible;
+        }
+
+        /// <summary>
+        /// hides the POICanvas
+        /// </summary>
+        public void hidePOICanvas()
+        {
+            POICanvas.Visibility = Visibility.Collapsed;
+        }
+
+        /// <summary>
         /// Handles the Click event of the button1 control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
