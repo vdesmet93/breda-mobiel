@@ -30,7 +30,7 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <Button Content="Home" Height="72" HorizontalAlignment="Left" Margin="296,529,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
             <Button Content="Terug" Height="72" HorizontalAlignment="Left" Margin="6,529,0,0" Name="button2" VerticalAlignment="Top" Width="160" Click="button2_Click" />
-            <TextBlock>
+            <TextBlock Margin="0,0,0,96">
                 Welkom bij de helpfunctie van  Breda Mobiel <LineBreak /> 
                 <LineBreak />
                 Met de Breda Mobiel zal U naar de hoogte punten <LineBreak />
