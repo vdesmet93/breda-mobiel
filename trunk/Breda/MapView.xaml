@@ -31,6 +31,7 @@
             <Button Content="Home" Height="72" HorizontalAlignment="Left" Margin="290,535,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
             <Button Content="Terug" Height="72" HorizontalAlignment="Left" Margin="0,535,0,0" Name="button2" VerticalAlignment="Top" Width="160" Click="button2_Click" />
             <my:Map Height="529" HorizontalAlignment="Left" Name="map1" VerticalAlignment="Top" Width="456" CredentialsProvider="AlR1tRjX7_x9bLvg7PhptJHNyxwx1ktu1EdZGI6PJJWYkMtM9yzC2k_-e-T1mqej" />
+            <Canvas Height="445" HorizontalAlignment="Left" Margin="39,37,0,0" Name="PICanvas" VerticalAlignment="Top" Width="380" Background="#ffffff" Visibility="{}" />
         </Grid>
     </Grid>
  
