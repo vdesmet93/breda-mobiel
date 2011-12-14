@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace View
 {
+    /// <summary>The POI class represents a POI where it holds the location, the infomation about it and what number it is in route.</summary>
     public class POI
     {
         private Double lengteGraad { get; set; }
@@ -12,12 +10,11 @@ namespace View
         private String info { get; set; }
         private int nummer { get; set; }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="POI"/> class.
-        /// </summary>
+        /// <summary>Initializes a new instance of the <see cref="POI"/> class.</summary>
         /// <param name="l">The longtitude.</param>
         /// <param name="b">The latitude.</param>
-        /// <param name="i">The info.</param>
+        /// <param name="i">The exra information.</param>
+        /// <param name="n">The number.</param>
         public POI(Double l, Double b, String i, int n)
         {
             lengteGraad = l;
