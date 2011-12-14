@@ -22,5 +22,10 @@ namespace View
             info = i;
             nummer = n;
         }
+
+        public String getInfo()
+        {
+            return info;
+        }
     }
 }
