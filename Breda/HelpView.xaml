@@ -31,9 +31,9 @@
             <Button Content="Home" Height="72" HorizontalAlignment="Left" Margin="296,529,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
             <Button Content="Terug" Height="72" HorizontalAlignment="Left" Margin="6,529,0,0" Name="button2" VerticalAlignment="Top" Width="160" Click="button2_Click" />
             <TextBlock>
-                Welcome bij de helpfunctie van  Breda Mobiel <LineBreak /> 
+                Welkom bij de helpfunctie van  Breda Mobiel <LineBreak /> 
                 <LineBreak />
-                Met de Breda Tour zal U daar de hoogte punten <LineBreak />
+                Met de Breda Mobiel zal U naar de hoogte punten <LineBreak />
                 van Breda worden geleid. En zal U deze zelf <LineBreak />
                 beleven, terwijl het verhaal erachter word getoond. <LineBreak />
                 <LineBreak />
@@ -41,10 +41,10 @@
                 kaart te openen, de rest zal gebeuren wanneer u de <LineBreak />
                 route doorloopt.<LineBreak />
                 <LineBreak />
-                Indien U informatie wenst over bezienswaardigheid <LineBreak />
-                op de route kunt u deze aanklikken op de kaart. <LineBreak />
+                Indien U informatie wenst over een <LineBreak /> bezienswaardigheid 
+                op de route kunt u deze  <LineBreak /> aanklikken op de kaart. <LineBreak />
                 <LineBreak />
-                Wanneer de applicatie niet problemen geeft kunt <LineBreak />
+                Wanneer de applicatie problemen geeft kunt <LineBreak />
                 U dit melden bij de lokale VVV staff <LineBreak />
                 <LineBreak />
                 Breda Mobiel wenst U een prettig verkenning. <LineBreak />
