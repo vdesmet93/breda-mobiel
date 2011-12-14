@@ -75,6 +75,10 @@ namespace View
  
         }
 
+        /// <summary>
+        /// Called when [location changed].
+        /// </summary>
+        /// <param name="l">The l.</param>
         public void OnLocationChanged(GeoCoordinate l)
         {
             map1.Center = l;
@@ -97,6 +101,10 @@ namespace View
         }
 
 
+        /// <summary>
+        /// Adds the waypoint.
+        /// </summary>
+        /// <param name="g">The g.</param>
         public void addWaypoint(GeoCoordinate g)
         {
             Image image = new Image();
