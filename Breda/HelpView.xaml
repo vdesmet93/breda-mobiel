@@ -22,7 +22,7 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="Breda Tour" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="ApplicationTitle" Text="Breda Mobiel" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock x:Name="PageTitle" Text="Help" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
@@ -30,7 +30,26 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <Button Content="Home" Height="72" HorizontalAlignment="Left" Margin="296,529,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
             <Button Content="Terug" Height="72" HorizontalAlignment="Left" Margin="6,529,0,0" Name="button2" VerticalAlignment="Top" Width="160" Click="button2_Click" />
-            <TextBlock Height="523" HorizontalAlignment="Left" Name="textBlock" Text="Info dummie" VerticalAlignment="Top" Width="456" />
+            <TextBlock>
+                Welcome bij de helpfunctie van  Breda Mobiel <LineBreak /> 
+                <LineBreak />
+                Met de Breda Tour zal U daar de hoogte punten <LineBreak />
+                van Breda worden geleid. En zal U deze zelf <LineBreak />
+                beleven, terwijl het verhaal erachter word getoond. <LineBreak />
+                <LineBreak />
+                Dit is moeiteloos te doen. U hoeft alleen maar de <LineBreak />
+                kaart te openen, de rest zal gebeuren wanneer u de <LineBreak />
+                route doorloopt.<LineBreak />
+                <LineBreak />
+                Indien U informatie wenst over bezienswaardigheid <LineBreak />
+                op de route kunt u deze aanklikken op de kaart. <LineBreak />
+                <LineBreak />
+                Wanneer de applicatie niet problemen geeft kunt <LineBreak />
+                U dit melden bij de lokale VVV staff <LineBreak />
+                <LineBreak />
+                Breda Mobiel wenst U een prettig verkenning. <LineBreak />
+
+            </TextBlock>
         </Grid>
     </Grid>
  
