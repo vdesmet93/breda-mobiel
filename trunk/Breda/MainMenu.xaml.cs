@@ -18,7 +18,7 @@ namespace View
     {
         // Constructor
         private static Breda.App bredamobiel;
-        MapView map = new MapView();
+       // MapView map = new MapView();
         HelpView help = new HelpView();
         ThemeChooser theme = new ThemeChooser();
 

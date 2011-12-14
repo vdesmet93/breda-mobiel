@@ -12,11 +12,13 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 using System.Device.Location;
+using System.Windows.Media.Imaging;
 
 namespace View
 {
     public partial class MapView : PhoneApplicationPage
     {
+        private Pushpin myPushpin;
         /// <summary>
         /// Initializes a new instance of the <see cref="MapView"/> class.
         /// </summary>
@@ -26,6 +28,8 @@ namespace View
             Controller.Controller control = Breda.App.control;
             control.LocationChanged +=new Controller.Controller.OnLocationChanged(OnLocationChanged);
             map1.Center = control.getLocation();
+
+
         }
 
         /// <summary>
@@ -75,7 +79,8 @@ namespace View
         {
             map1.Center = l;
             map1.ZoomLevel = 15;
-            Pushpin myPushpin = new Pushpin();
+            if (myPushpin != null) map1.Children.Remove(myPushpin);
+            myPushpin = new Pushpin();
             myPushpin.Template = null;
             myPushpin.Content = new Ellipse()
             {
@@ -86,9 +91,24 @@ namespace View
                 Width = 25
             };
             myPushpin.Location = l;
-            if(map1.Children.Count != 0)       map1.Children.RemoveAt(0);
+            
             map1.Children.Add(myPushpin);
+            
         }
 
+
+        public void addWaypoint(GeoCoordinate g)
+        {
+            Image image = new Image();
+            image.Source = new BitmapImage(
+               new Uri("red-dot.png", UriKind.Relative));
+            MapLayer mylayer = new MapLayer();
+            mylayer.AddChild(image, new LocationRect()
+            {
+                Northeast = new GeoCoordinate(g.Latitude + 0.002, g.Longitude + 0.002),
+                Southwest = g
+            });
+            map1.Children.Add(mylayer);
+        }
     }
 }
