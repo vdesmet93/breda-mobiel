@@ -7,22 +7,23 @@ namespace View
 {
     public class POI
     {
-        public Double lengteGraad;
-        public Double breedteGraad;
-        public String info;
+        private Double lengteGraad { get; set; }
+        private Double breedteGraad { get; set; }
+        private String info { get; set; }
+        private int nummer { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="POI"/> class.
         /// </summary>
-        /// <param name="l">The l.</param>
-        /// <param name="b">The b.</param>
-        /// <param name="i">The i.</param>
-        public POI(Double l, Double b, String i)
+        /// <param name="l">The longtitude.</param>
+        /// <param name="b">The latitude.</param>
+        /// <param name="i">The info.</param>
+        public POI(Double l, Double b, String i, int n)
         {
-            this.lengteGraad = l;
-            this.breedteGraad = b;
-            this.info = i;
-            
+            lengteGraad = l;
+            breedteGraad = b;
+            info = i;
+            nummer = n;
         }
     }
 }

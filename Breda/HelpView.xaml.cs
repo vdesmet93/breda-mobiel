@@ -15,18 +15,12 @@ namespace View
 {
     public partial class HelpView : PhoneApplicationPage
     {
-        private Model.FileManager fileIO;
+        //private Model.FileManager fileIO;
         /// Initializes a new instance of the <see cref="HelpView"/> class.
         /// </summary>
         public HelpView()
         {
             InitializeComponent();
-            showHelp();
-        }
-
-        private void showHelp()
-        {
-
         }
 
         /// <summary>

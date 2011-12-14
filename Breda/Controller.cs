@@ -18,17 +18,14 @@ namespace Controller
 {
     public class Controller
     {
-
+        //private POI[] POIs = new POI[] { new POI(51.3, 19.2, ""), new POI(51.3, 19.2, ""), new POI(51.3, 19.2, "") };
         GeoCoordinateWatcher watcher;
         private Breda.App bredamobiel;
         private Model.FileManager fileIO;
         private Database db;
-        //private POI[] POIs = new POI[] { new POI(51.3, 19.2, ""), new POI(51.3, 19.2, ""), new POI(51.3, 19.2, "") };
-
-        public bool hasLocation { get; private set; }
-        public double latitude { get; private set; }
-        public double longtitude { get; private set; }
-
+        private bool hasLocation { get; set; }
+        private double latitude { get; set; }
+        private double longtitude { get; set; }
         private ObservableCollection<DatabaseTable> _DatabaseTables;
         public ObservableCollection<DatabaseTable> DatabaseTables
         {
@@ -49,7 +46,7 @@ namespace Controller
         /// <summary>
         /// Initializes a new instance of the <see cref="Controller"/> class.
         /// </summary>
-        /// <param name="breda">The breda.</param>
+        /// <param name="breda">The breda app.</param>
         public Controller(Breda.App breda)
         {
             _DatabaseTables = new ObservableCollection<DatabaseTable>();
@@ -62,32 +59,21 @@ namespace Controller
             {
                 MovementThreshold = 2
             };
-
             watcher.PositionChanged += this.watcher_PositionChanged;
             watcher.StatusChanged += this.watcher_StatusChanged;
             watcher.Start();
-
             // Create the database if it does not exist.
             db = new Database();
-
-            //Create the database if necessarily
+            //Create the database if necessary
             if (!db.DatabaseExists())
             {
                 db.CreateDatabase();
                 fillDatabase();
             }
-            
-            
-
-
-            
-
-
             // read data?
             var DB = from DatabaseTable databasetable in db.databaseTables select databasetable;
             // Execute query and place results into a collection.
             DatabaseTables = new ObservableCollection<DatabaseTable>(DB);
-
             
             String text = String.Format("{0}, {1}, {2}, {3} \n", DatabaseTables[0].Nummer, DatabaseTables[0].Longitude, DatabaseTables[0].Latitude, DatabaseTables[0].Naam);
             text += String.Format("{0}, {1}, {2}, {3} \n", DatabaseTables[1].Nummer, DatabaseTables[1].Longitude, DatabaseTables[1].Latitude, DatabaseTables[1].Naam);
@@ -217,7 +203,6 @@ namespace Controller
         {
             return fileIO;
         }
-
 
         #region INotifyPropertyChanged Members
 

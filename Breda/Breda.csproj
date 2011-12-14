@@ -62,9 +62,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="mscorlib.extensions" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="VoorbeeldNavigatie">
-      <HintPath>..\..\..\Downloads\voorbeelden les 3\voorbeelden les 3\VoorbeeldNavigatie\Bin\Debug\VoorbeeldNavigatie.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
