@@ -13,6 +13,7 @@ using System.Device.Location;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using Microsoft.Phone.Controls.Maps;
 
 namespace Controller
 {
@@ -23,9 +24,11 @@ namespace Controller
         private Breda.App bredamobiel;
         private Model.FileManager fileIO;
         private Database db;
-        private bool hasLocation { get; set; }
-        private double latitude { get; set; }
-        private double longtitude { get; set; }
+        private  bool hasLocation { get; set; }
+        private  double latitude { get; set; }
+        private  double longtitude { get; set; }
+        public event OnLocationChanged LocationChanged;
+        public delegate void OnLocationChanged(GeoCoordinate l);
         private ObservableCollection<DatabaseTable> _DatabaseTables;
         public ObservableCollection<DatabaseTable> DatabaseTables
         {
@@ -85,15 +88,12 @@ namespace Controller
         {
 
             DatabaseTable item = new DatabaseTable { Nummer = 1, Latitude = 51.5938D, Longitude = 4.77963D, Naam = "VVV Breda" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
 
             item = new DatabaseTable { Nummer = 2, Latitude = 51.59327833333333D, Longitude = 4.779388333333333D, Naam = "Liefdeszuster" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
 
             item = new DatabaseTable { Nummer = 3, Latitude = 51.59250D, Longitude = 4.779695D, Naam = "Nassau Baronie Monument" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
 
             item = new DatabaseTable { Nummer = 4, Latitude = 51.59327833333333D, Longitude = 4.779388333333333D, Naam = "Liefdeszuster" };
@@ -194,6 +194,10 @@ namespace Controller
 
 
             db.SubmitChanges();
+
+            var DB = from DatabaseTable databasetable in db.databaseTables select databasetable;
+            // Execute query and place results into a collection.
+            DatabaseTables = new ObservableCollection<DatabaseTable>(DB);
         }
 
         /// <summary>
@@ -226,7 +230,8 @@ namespace Controller
             hasLocation = true;
             var epl = e.Position.Location;
             latitude = epl.Latitude;
-            latitude = epl.Longitude;
+            longtitude = epl.Longitude;
+            if(LocationChanged != null) LocationChanged(getLocation());
         }
         /// <summary>
         /// Calcs the specifications.
@@ -289,6 +294,15 @@ namespace Controller
 
         private void detectPOI()
         {
+
+        }
+
+        public GeoCoordinate getLocation()
+        {
+            GeoCoordinate l = new GeoCoordinate();
+            l.Latitude = latitude;
+            l.Longitude = longtitude;
+            return l;
 
         }
 
