@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Controls.Maps;
+using System.Device.Location;
 
 namespace View
 {
@@ -21,6 +23,9 @@ namespace View
         public MapView()
         {
             InitializeComponent();
+            Controller.Controller control = Breda.App.control;
+            control.LocationChanged +=new Controller.Controller.OnLocationChanged(OnLocationChanged);
+            map1.Center = control.getLocation();
         }
 
         /// <summary>
@@ -48,6 +53,25 @@ namespace View
         private void POI_Tap()
         {
  
+        }
+
+        public void OnLocationChanged(GeoCoordinate l)
+        {
+            map1.Center = l;
+            map1.ZoomLevel = 15;
+            Pushpin myPushpin = new Pushpin();
+            myPushpin.Template = null;
+            myPushpin.Content = new Ellipse()
+            {
+                Fill = new SolidColorBrush(Colors.Blue),
+                StrokeThickness =0,
+                Opacity = .8,
+                Height = 25,
+                Width = 25
+            };
+            myPushpin.Location = l;
+            if(map1.Children.Count != 0)       map1.Children.RemoveAt(0);
+            map1.Children.Add(myPushpin);
         }
 
     }
