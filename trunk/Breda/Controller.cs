@@ -8,12 +8,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
-using View;
 using System.Device.Location;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using Microsoft.Phone.Controls.Maps;
+using View;
 
 namespace Controller
 {
@@ -236,14 +236,14 @@ namespace Controller
         /// <summary>
         /// Calcs the specifications.
         /// </summary>
-        /// <param name="tohere">The tohere.</param>
+        /// <param name="tohere">The POI to g.</param>
         public void calcSpecifications(POI tohere)
         {
-
+            
         }
 
         /// <summary>
-        /// Changes the color of the POI.
+        /// Changes the color of the POI after the user has passed the POI while using the application.
         /// </summary>
         public void changePOIColor()
         {
@@ -256,7 +256,7 @@ namespace Controller
         /// <param name="newloc">The newloc.</param>
         public void generateRoute(POI newloc)
         {
-
+            
         }
 
         /// <summary>
@@ -275,7 +275,7 @@ namespace Controller
         /// <returns></returns>
         public string getInfo(POI info)
         {
-            return "";
+            return info.GetInfo();
         }
 
         /// <summary>
