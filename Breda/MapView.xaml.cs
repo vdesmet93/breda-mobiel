@@ -15,7 +15,6 @@ namespace View
 {
     public partial class MapView : PhoneApplicationPage
     {
-
         /// <summary>
         /// Initializes a new instance of the <see cref="MapView"/> class.
         /// </summary>
