@@ -9,7 +9,6 @@ namespace Controller
 {
     public class Controller
     {
-        //private POI[] POIs = new POI[] { new POI(51.3, 19.2, ""), new POI(51.3, 19.2, ""), new POI(51.3, 19.2, "") };
         GeoCoordinateWatcher watcher;
         private Breda.App bredamobiel;
         private Model.FileManager fileIO;
@@ -85,76 +84,52 @@ namespace Controller
             item = new DatabaseTable { Nummer = 3, Latitude = 51.59250D, Longitude = 4.779695D, Naam = "Nassau Baronie Monument" };
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 4, Latitude = 51.59327833333333D, Longitude = 4.779388333333333D, Naam = "Liefdeszuster" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 5, Latitude = 51.59283333333333D, Longitude = 4.7784716666666665D, Naam = "The Light house" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 6, Latitude = 51.59061166666667D, Longitude = 4.776166666666667D, Naam = "Kasteel van Breda" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 7, Latitude = 51.589695D, Longitude = 4.776138333333334D, Naam = "Stadhouderspoort" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 8, Latitude = 51.590028333333336D, Longitude = 4.774361666666667D, Naam = "Huis van Brecht" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 9, Latitude = 51.590195D, Longitude = 4.773445D, Naam = "Spanjaardsgat" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 10, Latitude = 51.58983333333333D, Longitude = 4.773333333333333D, Naam = "Vismarkt" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 11, Latitude = 51.58936166666667D, Longitude = 4.774445D, Naam = "Havermarkt" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 12, Latitude = 51.58883333333333D, Longitude = 4.7752783333333335D, Naam = "Grote Kerk" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 13, Latitude = 51.588195D, Longitude = 4.7751383333333335D, Naam = "Het Poortje" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 14, Latitude = 51.58708333333333D, Longitude = 4.77575D, Naam = "Ridderstraat" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 15, Latitude = 51.58741666666667D, Longitude = 4.776555D, Naam = "Grote Markt" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 16, Latitude = 51.588028333333334D, Longitude = 4.7763333333333335D, Naam = "Bevrijdingsmonument" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 17, Latitude = 51.58875D, Longitude = 4.776111666666667D, Naam = "StadHuis" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 18, Latitude = 51.58763833333333D, Longitude = 4.77725D, Naam = "Antonius van Paduakerk" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 19, Latitude = 51.588D, Longitude = 4.778945D, Naam = "Bibliotheek" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 20, Latitude = 51.58772166666667D, Longitude = 4.781028333333333D, Naam = "Kloosterkazerne" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 21, Latitude = 51.58775D, Longitude = 4.782D, Naam = "Chasse theater" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 22, Latitude = 51.58775D, Longitude = 4.78125D, Naam = "Binding van Isaac" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 23, Latitude = 51.589666666666666D, Longitude = 4.781D, Naam = "Beyerd" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 24, Latitude = 51.589555D, Longitude = 4.78D, Naam = "Gasthuispoort" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 25, Latitude = 51.58911166666667D, Longitude = 4.777945D, Naam = "Willem Merkxtuin" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 26, Latitude = 51.589695D, Longitude = 4.778361666666667D, Naam = "Begijnenhof" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 27, Latitude = 51.5895D, Longitude = 4.77625D, Naam = "Einde stadswandeling" };
-            DatabaseTables.Add(item);
             db.databaseTables.InsertOnSubmit(item);
             db.SubmitChanges();
             var DB = from DatabaseTable databasetable in db.databaseTables select databasetable;
@@ -218,7 +193,7 @@ namespace Controller
         /// <returns>The extra information as a string.</returns>
         public string getInfo(POI info)
         {
-            return info.getInfo();
+            return info.informatie;
         }
 
         /// <summary>Checks if the user is on the route to navigate.</summary>
