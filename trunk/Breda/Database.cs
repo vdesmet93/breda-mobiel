@@ -11,17 +11,15 @@ using System.Windows.Shapes;
 
 namespace View
 {
+    /// <summary>The database handles as a palce to save all the data neccesary for the application.</summary>
+    /// <remarks>Firstly a connection string get's (Used in main and app) specified and afterwards the table for the data is specified.</remarks>
     public class Database : System.Data.Linq.DataContext
     {
-        // Specify the connection string as a static, used in main page and app.xaml.
         public static string DBConnectionString = "Data Source=isostore:/database.sdf";
-
-        public Database()
-            : base(DBConnectionString)
+        public Database() : base(DBConnectionString)
         {
-        }
 
-        // Specify a single table for the to-do items.
+        }
         public System.Data.Linq.Table<DatabaseTable> databaseTables;
     }
 }
