@@ -5,7 +5,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:tk="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
      mc:Ignorable="d"
-                Title="Informatie Scherm"
                 FontFamily="{StaticResource PhoneFontFamilyNormal}"
                 FontSize="{StaticResource PhoneFontSizeNormal}"
                 Foreground="{StaticResource PhoneForegroundBrush}"
@@ -13,12 +12,13 @@
                 Width="296"
                 OverlayBrush="#7F000000"
                 BorderBrush="Black"
-                BorderThickness="2"
-                >
+                BorderThickness="2" 
+                HasCloseButton="False"
+                Closed="ChildWindow_Closed">
 
     <Grid x:Name="LayoutRoot"
         Background="{StaticResource PhoneChromeBrush}">
-        <TextBlock Text="POI info, bla bla bla bala blabalbalblal"
+        <TextBlock Text="" Name="Textbox1"
                TextWrapping="Wrap" />
         <Button Content="Close"
             x:Name="closeButton"

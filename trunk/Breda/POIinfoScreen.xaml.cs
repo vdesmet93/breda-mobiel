@@ -13,11 +13,17 @@ namespace View
         public POIinfoScreen(String info)
         {
             InitializeComponent();
+            Textbox1.Text = info;
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void ChildWindow_Closed(object sender, EventArgs e)
+        {
+
         }
     }
 }
