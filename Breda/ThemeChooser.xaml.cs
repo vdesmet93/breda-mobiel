@@ -15,6 +15,12 @@ namespace View
 {
     public partial class ThemeChooser : PhoneApplicationPage
     {
+        public Double lengteGraad { get; private set; }
+        public Double breedteGraad { get; private set; }
+        public String informatie { get; private set; }
+        public int nummer { get; private set; }
+        public MapView mapView;
+        public POI Poi;
         String Theme = "";
 
         /// <summary>
@@ -32,9 +38,11 @@ namespace View
         /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void historisbutton_Click(object sender, RoutedEventArgs e)
         {
-            SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
-            sBrush.Color = Colors.Blue;
-            Theme = "historis";
+            //SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
+            //sBrush.Color = Colors.Blue;
+
+            int id = 42;
+            NavigationService.Navigate(new Uri(String.Format("/MapView.xaml?canvas={0}", id), UriKind.Relative));            
         }
 
         /// <summary>
@@ -56,9 +64,11 @@ namespace View
         /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void Allebutton_Click(object sender, RoutedEventArgs e)
         {
-            SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
-            sBrush.Color = Colors.White;
-            Theme = "Alle";
+           // SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
+           // sBrush.Color = Colors.White;
+          //  Theme = "Alle";
+            mapView.POI_Tap();
+
         }
 
         /// <summary>
@@ -68,10 +78,7 @@ namespace View
         /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void okbutton_Click(object sender, RoutedEventArgs e)
         {
-            if(Theme!="")
-            {
-                NavigationService.Navigate(new Uri("/MapView.xaml", UriKind.Relative));
-            }
+            historisbutton_Click(sender, e);
         }
 
         private void helpbutton_Click(object sender, RoutedEventArgs e)
