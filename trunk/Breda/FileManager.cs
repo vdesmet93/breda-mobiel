@@ -80,22 +80,8 @@ namespace Model
         /// <returns>The content of the file</returns>
         public string LoadAndDelete(string location)
         {
-            var appStorage = IsolatedStorageFile.GetUserStoreForApplication();
-            string content = String.Empty;
-
-            if (appStorage.FileExists(location))
-            {
-                using (IsolatedStorageFileStream stream = appStorage.OpenFile(location, FileMode.Open))
-                {
-                    long length = stream.Length;
-
-                    byte[] decoded = new byte[length];
-                    stream.Read(decoded, 0, (int)length);
-                    content =  Encoding.UTF8.GetString(decoded, 0, (int)length);
-                }
-                appStorage.DeleteFile(location);
-            }
-            // no data
+            string content = Load(location);
+            Delete(location);
             return content;
         }
 
