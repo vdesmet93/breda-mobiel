@@ -26,26 +26,6 @@ namespace View
         }
 
         /// <summary>
-        /// Handles the Click event of the button1 control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/MainMenu.xaml", UriKind.Relative));
-        }
-
-        /// <summary>
-        /// Handles the Click event of the button2 control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
-        private void button2_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.GoBack();
-        }
-
-        /// <summary>
         /// Handles the Click event of the historisbutton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
@@ -92,6 +72,16 @@ namespace View
             {
                 NavigationService.Navigate(new Uri("/MapView.xaml", UriKind.Relative));
             }
+        }
+
+        private void helpbutton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/HelpView.xaml", UriKind.Relative));
+        }
+
+        private void homebutton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/MainMenu.xaml", UriKind.Relative));
         }
     }
 }
