@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
@@ -113,16 +107,25 @@ namespace View
         /// <param name="g">The g.</param>
         public void addWaypoint(GeoCoordinate g)
         {
-            Image image = new Image();
-            image.Source = new BitmapImage(
-               new Uri("red-dot.png", UriKind.Relative));
-            MapLayer mylayer = new MapLayer();
-            mylayer.AddChild(image, new LocationRect()
+            bool a = false;
+            if (a)
             {
-                Northeast = new GeoCoordinate(g.Latitude + 0.0005, g.Longitude + 0.0005),
-                Southwest = g
-            });
-            map1.Children.Add(mylayer);
+                Image image = new Image();
+                image.Source = new BitmapImage(
+                new Uri("red-dot.png", UriKind.Relative));
+                MapLayer mylayer = new MapLayer();
+                mylayer.AddChild(image, new LocationRect()
+                {
+                    Northeast = new GeoCoordinate(g.Latitude + 0.0005, g.Longitude + 0.00025),
+                    Southwest = new GeoCoordinate(g.Latitude, g.Longitude - 0.00025)
+                });
+                map1.Children.Add(mylayer);
+            }
+            else
+            {
+                POI poi = new POI(g);
+                map1.Children.Add(poi.pushpin);
+            }
         }
     }
 }
