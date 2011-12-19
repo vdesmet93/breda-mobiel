@@ -130,7 +130,7 @@ namespace View
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            POIinfoScreen wnd = new POIinfoScreen();
+            POIinfoScreen wnd = new POIinfoScreen("started from button");
             wnd.Show();
         }
     }
