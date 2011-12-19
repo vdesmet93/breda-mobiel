@@ -67,7 +67,7 @@ namespace View
            // SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
            // sBrush.Color = Colors.White;
           //  Theme = "Alle";
-            mapView.POI_Tap();
+         
 
         }
 

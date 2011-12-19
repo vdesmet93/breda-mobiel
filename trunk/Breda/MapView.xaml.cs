@@ -13,6 +13,30 @@ namespace View
     public partial class MapView : PhoneApplicationPage
     {
         private Pushpin myPushpin;
+        private int id;
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            
+            string ids = "";
+            if (NavigationContext.QueryString.TryGetValue("canvas", out ids))
+            {
+               
+                if (Int32.TryParse("canvas", out id))
+                {
+                 showPOICanvas();
+                }
+                else
+                {
+                    // als id niet bestaat hier fout melden.
+                  showPOICanvas();
+                }
+            }
+            else
+            {
+                hidePOICanvas(); 
+            }
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="MapView"/> class.
         /// </summary>
@@ -133,5 +157,16 @@ namespace View
             POIinfoScreen wnd = new POIinfoScreen("started from button");
             wnd.Show();
         }
+
+        private void sluitenboutton_Click(object sender, RoutedEventArgs e)
+        {
+            hidePOICanvas();
+        }
+
+        private void meerbutton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }

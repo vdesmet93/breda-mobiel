@@ -151,3 +151,46 @@ C:\Users\Luttik\Documents\Visual Studio 2010\Projects\Breda Mobiel\Breda\Bin\Deb
 C:\Users\Luttik\Documents\Visual Studio 2010\Projects\Breda Mobiel\Breda\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
 C:\Users\Luttik\Documents\Visual Studio 2010\Projects\Breda Mobiel\Breda\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
 C:\Users\Luttik\Documents\Visual Studio 2010\Projects\Breda Mobiel\Breda\obj\Debug\XapCacheFile.xml
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\obj\Debug\POIinfoScreen.g.i.cs
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\System.Windows.Controls.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\System.Windows.Controls.xml
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\ar\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\bg\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\ca\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\cs\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\da\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\de\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\el\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\es\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\et\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\eu\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\fi\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\fr\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\he\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\hr\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\hu\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\id\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\it\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\ja\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\ko\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\lt\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\lv\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\ms\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\nl\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\no\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\pl\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\pt\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\pt-BR\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\ro\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\ru\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\sk\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\sl\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\sr-Cyrl-CS\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\sr-Latn-CS\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\sv\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\th\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\tr\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\uk\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\vi\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
