@@ -1,8 +1,10 @@
 ﻿using System;
-using Microsoft.Phone.Controls.Maps;
 using System.Device.Location;
-using System.Windows.Shapes;
 using System.Windows.Media;
+using System.Windows.Shapes;
+using Microsoft.Phone.Controls.Maps;
+using System.Windows.Input;
+using System.Diagnostics;
 
 namespace View
 {
@@ -44,6 +46,12 @@ namespace View
                 Height = 20,
                 Width = 20
             };
+            pushpin.MouseLeftButtonUp += pushpinClickedEvent;
+        }
+
+        public void pushpinClickedEvent(object sender, MouseButtonEventArgs e)
+        {
+            Debug.WriteLine("try");
         }
     }
 }
