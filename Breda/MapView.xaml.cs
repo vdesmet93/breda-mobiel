@@ -127,5 +127,11 @@ namespace View
                 map1.Children.Add(poi.pushpin);
             }
         }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            POIinfoScreen wnd = new POIinfoScreen();
+            wnd.Show();
+        }
     }
 }
