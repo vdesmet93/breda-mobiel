@@ -14,19 +14,24 @@ namespace View
         public String informatie { get; private set; }
         public int nummer { get; private set; }
         public Pushpin pushpin { get; private set; }
+        public MapView m { get; private set; }
         /// <summary>Initializes a new instance of the <see cref="POI"/> class.</summary>
         /// <param name="l">The longtitude.</param>
         /// <param name="b">The latitude.</param>
         /// <param name="i">The exra information.</param>
         /// <param name="n">The number.</param>
         
-        public POI(GeoCoordinate g)
+        public POI(GeoCoordinate g, MapView m)
         {
+            this.m = m;
             intializePushpin(g);
+            informatie = "informatie van POI zonder informatie";
+            nummer = 0;
         }
 
-        public POI(GeoCoordinate g, String i, int n)
+        public POI(GeoCoordinate g, MapView m, String i, int n)
         {
+            this.m = m;
             intializePushpin(g);
             informatie = i;
             nummer = n;
@@ -51,7 +56,8 @@ namespace View
 
         public void pushpinClickedEvent(object sender, MouseButtonEventArgs e)
         {
-            Debug.WriteLine("try");
+            POIinfoScreen wnd = new POIinfoScreen(informatie);
+            wnd.Show();
         }
     }
 }

@@ -2,5 +2,6 @@
   <Deployment.Parts>
     <AssemblyPart x:Name="Breda" Source="Breda.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls.Maps" Source="Microsoft.Phone.Controls.Maps.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls" Source="System.Windows.Controls.dll" />
   </Deployment.Parts>
 </Deployment>

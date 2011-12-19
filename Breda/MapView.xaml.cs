@@ -123,7 +123,7 @@ namespace View
             }
             else
             {
-                POI poi = new POI(g);
+                POI poi = new POI(g, this);
                 map1.Children.Add(poi.pushpin);
             }
         }
