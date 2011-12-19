@@ -57,6 +57,11 @@ namespace View
         public void pushpinClickedEvent(object sender, MouseButtonEventArgs e)
         {
             POIinfoScreen wnd = new POIinfoScreen(informatie);
+            m.map1.Center = ((Pushpin) sender).Location;
+            if (m.map1.ZoomLevel < 16)
+            {
+                m.map1.ZoomLevel = 16;
+            };
             wnd.Show();
         }
     }
