@@ -10,7 +10,7 @@ namespace View
     {
         public string HostName { get; set; }
 
-        public POIinfoScreen()
+        public POIinfoScreen(String info)
         {
             InitializeComponent();
         }
