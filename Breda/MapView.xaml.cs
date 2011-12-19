@@ -29,7 +29,13 @@ namespace View
             control.LocationChanged +=new Controller.Controller.OnLocationChanged(OnLocationChanged);
             map1.Center = control.getLocation();
 
+            foreach (DatabaseTable row in control.DatabaseTables)
+            {
+                GeoCoordinate geo = new GeoCoordinate() 
+                        { Latitude = row.Latitude, Longitude = row.Longitude };
 
+                addWaypoint(geo);
+            }
         }
 
         /// <summary>
