@@ -14,7 +14,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -22,18 +22,19 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="Breda Mobiel" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="Select Theme" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="PageTitle" FontSize="70" Text="Breda Mobiel" Foreground="Red" FontWeight="Bold" Margin="9,-7,0,0" Style="{StaticResource PhoneTextNormalStyle}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button Content="Home" Height="72" HorizontalAlignment="Left" Margin="296,529,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
-            <Button Content="Terug" Height="72" HorizontalAlignment="Left" Margin="6,529,0,0" Name="button2" VerticalAlignment="Top" Width="160" Click="button2_Click" />
-            <Button Content="Historisch" Height="72" HorizontalAlignment="Left" Margin="106,96,0,0" Name="historisbutton" VerticalAlignment="Top" Width="248" Click="historisbutton_Click" />
-            <Button Content="Uitgang" Height="72" HorizontalAlignment="Left" Margin="128,174,0,0" Name="uitgangbutton" VerticalAlignment="Top" Width="196" Click="uitgangbutton_Click" />
-            <Button Content="Ok" Height="72" HorizontalAlignment="Left" Margin="176,317,0,0" Name="okbutton" VerticalAlignment="Top" Width="104" Click="okbutton_Click" />
-            <Button Content="Alle punten" Height="72" HorizontalAlignment="Left" Margin="128,239,0,0" Name="Allebutton" VerticalAlignment="Top" Width="196" Click="Allebutton_Click" />
+            <Button Content="Historisch" Height="94" HorizontalAlignment="Left" Margin="102,93,0,0" Name="historisbutton" VerticalAlignment="Top" Width="248" Click="historisbutton_Click" Background="White"  Foreground="Black" BorderBrush="Red" BorderThickness="8"/>
+            <Button Content="Uitgang" Height="94" HorizontalAlignment="Left" Margin="128,174,0,0" Name="uitgangbutton" VerticalAlignment="Top" Width="196" Click="uitgangbutton_Click" Background="White"  Foreground="Black" BorderBrush="Red" BorderThickness="8"/>
+            <Button Content="Ok" Height="94" HorizontalAlignment="Left" Margin="180,388,0,0" Name="okbutton" VerticalAlignment="Top" Width="104" Click="okbutton_Click" Background="White"  Foreground="Black" BorderBrush="Red" BorderThickness="8"/>
+            <Button Content="Alle punten" Height="94" HorizontalAlignment="Left" Margin="128,254,0,0" Name="Allebutton" VerticalAlignment="Top" Width="196" Click="Allebutton_Click" Background="White"  Foreground="Black" BorderBrush="Red" BorderThickness="8"/>
+        </Grid>
+        <Grid x:Name="ContentPanel2" Grid.Row="1" Margin="0,550, 0,0" Background="Black">
+            <Button Content="Help" Height="84" HorizontalAlignment="Left" Margin="1,1,0,0" Name="helpbutton" VerticalAlignment="Top" Width="160" Background="Black" Foreground="White" BorderBrush="White" BorderThickness="8" Click="helpbutton_Click" />
+            <Button Content="Home" Height="84" HorizontalAlignment="Left" Margin="320,1,0,0" Name="homebutton" VerticalAlignment="Top" Width="160" Background="Black"  Foreground="White" BorderBrush="White" BorderThickness="8" Click="homebutton_Click" />
         </Grid>
     </Grid>
  

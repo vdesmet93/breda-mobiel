@@ -87,3 +87,5 @@ C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\obj\De
 C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\obj\Debug\XapCacheFile.xml
 C:\Users\Vincent\Desktop\SVN\Breda\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
 C:\Users\Vincent\Desktop\SVN\Breda\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
+C:\Users\TYB\Documents\Visual Studio 2010\Projects\Breda Mobiel SVN\Breda\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
