@@ -88,7 +88,7 @@ namespace View
         public void OnLocationChanged(GeoCoordinate l)
         {
             map1.Center = l;
-            map1.ZoomLevel = 15;
+            map1.ZoomLevel = 17;
             if (myPushpin != null) map1.Children.Remove(myPushpin);
             myPushpin = new Pushpin();
             myPushpin.Template = null;
@@ -119,7 +119,7 @@ namespace View
             MapLayer mylayer = new MapLayer();
             mylayer.AddChild(image, new LocationRect()
             {
-                Northeast = new GeoCoordinate(g.Latitude + 0.002, g.Longitude + 0.002),
+                Northeast = new GeoCoordinate(g.Latitude + 0.0005, g.Longitude + 0.0005),
                 Southwest = g
             });
             map1.Children.Add(mylayer);
