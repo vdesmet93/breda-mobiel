@@ -5,7 +5,6 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
-//using System.Device.Location;
 using System.Windows.Media.Imaging;
 using Microsoft.Phone.Controls.Maps.Platform;
 using System.Device.Location;
@@ -38,7 +37,7 @@ namespace View
 
                 addWaypoint(geo, row.Beschrijving);
             }
-            geocodeResults = new GeocodeService.GeocodeResult[control.getRowCount()];
+            //geocodeResults = new GeocodeService.GeocodeResult[control.getRowCount()];
              
             //Geocode("Seattle, WA" , 0);
             //Geocode("Redmond, WA" , 1);
@@ -46,7 +45,7 @@ namespace View
             
             
             
-            GeocodeResultToWaypoint(control.getWayPoints());
+            //GeocodeResultToWaypoint(control.getWayPoints());
         }
         /**
         // This method accepts a geocode query string as well as a ‘waypoint index’, which will be used to track each asynchronous geocode request.
@@ -204,7 +203,6 @@ namespace View
             }
         }
 
-
         /// <summary>
         /// Handles the Click event of the button1 control.
         /// </summary>
@@ -223,13 +221,6 @@ namespace View
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
-        }
-        /// <summary>
-        /// POs the i_ tap.
-        /// </summary>
-        private void POI_Tap()
-        {
- 
         }
 
         /// <summary>
@@ -264,25 +255,8 @@ namespace View
         /// <param name="g">The g.</param>
         public void addWaypoint(GeoCoordinate g, string info)
         {
-            bool a = false;
-            if (a)
-            {
-                Image image = new Image();
-                image.Source = new BitmapImage(
-                new Uri("red-dot.png", UriKind.Relative));
-                MapLayer mylayer = new MapLayer();
-                mylayer.AddChild(image, new LocationRect()
-                {
-                    Northeast = new GeoCoordinate(g.Latitude + 0.0005, g.Longitude + 0.00025),
-                    Southwest = new GeoCoordinate(g.Latitude, g.Longitude - 0.00025)
-                });
-                map1.Children.Add(mylayer);
-            }
-            else
-            {
-                POI poi = new POI(g, this, info);
-                map1.Children.Add(poi.pushpin);
-            }
+            POI poi = new POI(g, this, info);
+            map1.Children.Add(poi.pushpin);
         }
 
     }
