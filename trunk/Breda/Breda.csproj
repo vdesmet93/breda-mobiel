@@ -215,6 +215,7 @@
     <None Include="Service References\SearchService\View.SearchService.SearchResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <Content Include="ServiceReferences.ClientConfig" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApplicationIcon.png">
