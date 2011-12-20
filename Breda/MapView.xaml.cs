@@ -204,21 +204,6 @@ namespace View
             }
         }
 
-        /// <summary>
-        /// shows the POICanvas
-        /// </summary>
-        public void showPOICanvas()
-        {
-            POICanvas.Visibility = Visibility.Visible;
-        }
-
-        /// <summary>
-        /// hides the POICanvas
-        /// </summary>
-        public void hidePOICanvas()
-        {
-            POICanvas.Visibility = Visibility.Collapsed;
-        }
 
         /// <summary>
         /// Handles the Click event of the button1 control.
@@ -298,22 +283,6 @@ namespace View
                 POI poi = new POI(g, this, info);
                 map1.Children.Add(poi.pushpin);
             }
-        }
-
-        private void button3_Click(object sender, RoutedEventArgs e)
-        {
-            POIinfoScreen wnd = new POIinfoScreen("started from button");
-            wnd.Show();
-        }
-
-        private void sluitenboutton_Click(object sender, RoutedEventArgs e)
-        {
-            hidePOICanvas();
-        }
-
-        private void meerbutton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
     }
