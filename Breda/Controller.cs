@@ -14,6 +14,7 @@ using System.ComponentModel;
 using System.Linq;
 using Microsoft.Phone.Controls.Maps;
 using View;
+using Microsoft.Phone.Controls.Maps.Platform;
 
 namespace Controller
 {
@@ -88,9 +89,9 @@ namespace Controller
         private void fillDatabase()
         {
             DatabaseTable item = new DatabaseTable { Nummer = 1, Latitude = 51.5938D, Longitude = 4.77963D, Naam = "VVV Breda" };
-            db.databaseTables.InsertOnSubmit(item);
-            item = new DatabaseTable { Nummer = 2, Latitude = 51.59327833333333D, Longitude = 4.779388333333333D, Naam = "Liefdeszuster" };
-            db.databaseTables.InsertOnSubmit(item);
+      //      db.databaseTables.InsertOnSubmit(item);
+       //     item = new DatabaseTable { Nummer = 2, Latitude = 51.59327833333333D, Longitude = 4.779388333333333D, Naam = "Liefdeszuster" };
+       //     db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 3, Latitude = 51.59250D, Longitude = 4.779695D, Naam = "Nassau Baronie Monument" };
             db.databaseTables.InsertOnSubmit(item);
             item = new DatabaseTable { Nummer = 4, Latitude = 51.59327833333333D, Longitude = 4.779388333333333D, Naam = "Liefdeszuster" };
@@ -147,6 +148,23 @@ namespace Controller
             DatabaseTables = new ObservableCollection<DatabaseTable>(DB);
         }
 
+        public int getRowCount()
+        {
+            if (DatabaseTables != null) return DatabaseTables.Count;
+            else return 0;
+        }
+        public Location[] getWayPoints()
+        {
+            Location[] locations = new Location[DatabaseTables.Count];
+
+            for (int i = 0; i < DatabaseTables.Count; i++)
+            {
+                locations[i] = new Location();
+                locations[i].Latitude = DatabaseTables[i].Latitude;
+                locations[i].Longitude = DatabaseTables[i].Longitude;
+            }
+            return locations;
+        }
         /// <summary>Handles the StatusChanged event of the watcher control.</summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="System.Device.Location.GeoPositionStatusChangedEventArgs"/> instance containing the event data.</param>
@@ -177,7 +195,7 @@ namespace Controller
             if (LocationChanged != null) LocationChanged(getLocation());
         }
 
-        /// <summary>Calcs the POI to navigate to..</summary>
+        /// <summary>Calculates how far the current location is away from the rotue.</summary>
         /// <param name="tohere">The POI to go to.</param>
         public void calcSpecifications(POI tohere)
         {
@@ -195,7 +213,7 @@ namespace Controller
         /// <param name="newloc">The new location to navigate to.</param>
         public void generateRoute(POI newloc)
         {
-
+            //Get the list of POI's and create a route passing all of them.
         }
 
         /// <summary>Gets the extra information about a POI.</summary>
@@ -213,7 +231,7 @@ namespace Controller
             return false;
         }
 
-        /// <summary>Checks if the suer has passes a POI.</summary>
+        /// <summary>Checks if the user has passed a POI.</summary>
         /// <returns>Returns true if the user passed a POI, otherwise false.</returns>
         private Boolean detectPOI()
         {
