@@ -14,11 +14,13 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Controller;
 using System.ComponentModel;
+using System.Diagnostics;
 namespace Breda
 {
     public partial class App : Application
     {
         View.SplashScreen splashScreen;
+        public Color themeColor { get; set; }
 
         public static Controller.Controller control { get; private set; }
         /// <summary>
@@ -32,7 +34,7 @@ namespace Breda
         /// </summary>
         public App()
         {
-            
+            themeColor = Colors.White;
             // Global handler for uncaught exceptions. 
             UnhandledException += Application_UnhandledException;
 
@@ -125,6 +127,7 @@ namespace Breda
             if (System.Diagnostics.Debugger.IsAttached)
             {
                 // A navigation has failed; break into the debugger
+                Debug.WriteLine(e);
                 System.Diagnostics.Debugger.Break();
             }
         }

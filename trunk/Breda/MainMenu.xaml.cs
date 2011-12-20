@@ -17,10 +17,10 @@ namespace View
     public partial class MainMenu : PhoneApplicationPage
     {
         // Constructor
-        private static Breda.App bredamobiel;
-       // MapView map = new MapView();
+        static Breda.App bredamobiel;
+        // MapView map = new MapView();
         HelpView help = new HelpView();
-        ThemeChooser theme = new ThemeChooser();
+
 
         public MainMenu()
         {
@@ -56,7 +56,7 @@ namespace View
         /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/ThemeChooser.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri(String.Format("/ThemeChooser.xaml",this), UriKind.Relative));
         }
 
         /// <summary>

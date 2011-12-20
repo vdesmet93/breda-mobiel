@@ -11,6 +11,7 @@ using Microsoft.Phone.Controls.Maps.Platform;
 using System.Device.Location;
 using View.RouteService;
 using View.GeocodeService;
+using Breda;
 
 namespace View
 {
@@ -18,30 +19,8 @@ namespace View
     {
         internal GeocodeService.GeocodeResult[] geocodeResults;
         private Pushpin myPushpin;
-        private int id;
-        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-            
-            string ids = "";
-            if (NavigationContext.QueryString.TryGetValue("canvas", out ids))
-            {
-               
-                if (Int32.TryParse("canvas", out id))
-                {
-                 showPOICanvas();
-                }
-                else
-                {
-                    // als id niet bestaat hier fout melden.
-                  showPOICanvas();
-                }
-            }
-            else
-            {
-                hidePOICanvas(); 
-            }
-        }
+        public Color themeColor = ((App)Application.Current).themeColor;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MapView"/> class.
         /// </summary>
@@ -57,7 +36,7 @@ namespace View
                 GeoCoordinate geo = new GeoCoordinate() 
                         { Latitude = row.Latitude, Longitude = row.Longitude };
 
-                addWaypoint(geo);
+                addWaypoint(geo, row.Beschrijving);
             }
             geocodeResults = new GeocodeService.GeocodeResult[control.getRowCount()];
              
@@ -298,7 +277,7 @@ namespace View
         /// Adds the waypoint.
         /// </summary>
         /// <param name="g">The g.</param>
-        public void addWaypoint(GeoCoordinate g)
+        public void addWaypoint(GeoCoordinate g, string info)
         {
             bool a = false;
             if (a)
@@ -316,7 +295,7 @@ namespace View
             }
             else
             {
-                POI poi = new POI(g, this);
+                POI poi = new POI(g, this, info);
                 map1.Children.Add(poi.pushpin);
             }
         }
