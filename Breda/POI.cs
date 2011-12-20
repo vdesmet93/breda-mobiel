@@ -21,11 +21,11 @@ namespace View
         /// <param name="i">The exra information.</param>
         /// <param name="n">The number.</param>
         
-        public POI(GeoCoordinate g, MapView m)
+        public POI(GeoCoordinate g, MapView m, string info)
         {
             this.m = m;
             intializePushpin(g);
-            informatie = "informatie van POI zonder informatie";
+            informatie = info;
             nummer = 0;
         }
 
@@ -42,10 +42,20 @@ namespace View
             pushpin = new Pushpin();
             pushpin.Location = g;
             pushpin.Template = null;
+            Color a;
+            if(m.themeColor == Colors.White)
+            {
+                a = Colors.Black;
+            }
+            else
+            {
+                a = m.themeColor;
+            }
+
             pushpin.Content = new Ellipse()
             {
-                Fill = new SolidColorBrush(Colors.Red),
-                Stroke = new SolidColorBrush(Colors.Red),
+                Fill = new SolidColorBrush(a),
+                Stroke = new SolidColorBrush(a),
                 StrokeThickness = 5,
                 Opacity = .8,
                 Height = 20,

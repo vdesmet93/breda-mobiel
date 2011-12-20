@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using Model;
+using Breda;
 
 namespace View
 {
@@ -22,10 +24,10 @@ namespace View
         public MapView mapView;
         public POI Poi;
         String Theme = "";
-
         /// <summary>
         /// Initializes a new instance of the <see cref="ThemeChooser"/> class.
         /// </summary>
+        public MainMenu mainMenu { get; set; }
         public ThemeChooser()
         {
             InitializeComponent();
@@ -38,11 +40,10 @@ namespace View
         /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void historisbutton_Click(object sender, RoutedEventArgs e)
         {
-            //SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
-            //sBrush.Color = Colors.Blue;
-
-            int id = 42;
-            NavigationService.Navigate(new Uri(String.Format("/MapView.xaml?canvas={0}", id), UriKind.Relative));            
+            SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
+            sBrush.Color = Colors.Blue;
+            ((App)Application.Current).themeColor = Colors.Blue;
+            Theme = "historis";
         }
 
         /// <summary>
@@ -54,6 +55,7 @@ namespace View
         {
             SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
             sBrush.Color = Colors.Red;
+            ((App)Application.Current).themeColor = Colors.Red;
             Theme = "uitgang";
         }
 
@@ -64,11 +66,11 @@ namespace View
         /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void Allebutton_Click(object sender, RoutedEventArgs e)
         {
-           // SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
-           // sBrush.Color = Colors.White;
-          //  Theme = "Alle";
-         
+            SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
 
+            sBrush.Color = Colors.White;
+            ((App)Application.Current).themeColor = Colors.White;
+            Theme = "Alle";
         }
 
         /// <summary>
