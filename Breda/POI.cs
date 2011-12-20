@@ -21,20 +21,13 @@ namespace View
         /// <param name="i">The exra information.</param>
         /// <param name="n">The number.</param>
         
-        public POI(GeoCoordinate g, MapView m, string info)
+        public POI(GeoCoordinate g, MapView m, string info, int nummer)
         {
             this.m = m;
+            this.nummer = nummer;
             intializePushpin(g);
             informatie = info;
-            nummer = 0;
-        }
-
-        public POI(GeoCoordinate g, MapView m, String i, int n)
-        {
-            this.m = m;
-            intializePushpin(g);
-            informatie = i;
-            nummer = n;
+            this.nummer = nummer;
         }
 
         private void intializePushpin(GeoCoordinate g)

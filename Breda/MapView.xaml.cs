@@ -35,93 +35,14 @@ namespace View
                 GeoCoordinate geo = new GeoCoordinate() 
                         { Latitude = row.Latitude, Longitude = row.Longitude };
 
-                addWaypoint(geo, row.Beschrijving);
+                addWaypoint(geo, row.Beschrijving, row.Nummer);
+
             }
             geocodeResults = new GeocodeService.GeocodeResult[control.getRowCount()];
-             
-            //Geocode("Seattle, WA" , 0);
-            //Geocode("Redmond, WA" , 1);
-            
-            
             
             
             GeocodeResultToWaypoint(control.getWayPoints());
         }
-        /**
-        // This method accepts a geocode query string as well as a ‘waypoint index’, which will be used to track each asynchronous geocode request.
-        private void Geocode(string strAddress, int waypointIndex)
-        {
-            // Create the service variable and set the callback method using the GeocodeCompleted property.
-            GeocodeService.GeocodeServiceClient geocodeService = new GeocodeService.GeocodeServiceClient("BasicHttpBinding_IGeocodeService");
-            geocodeService.GeocodeCompleted += new EventHandler<GeocodeService.GeocodeCompletedEventArgs>(geocodeService_GeocodeCompleted);
-
-            // Set the credentials and the geocode query, which could be an address or location.
-            GeocodeService.GeocodeRequest geocodeRequest = new GeocodeService.GeocodeRequest();
-            geocodeRequest.Credentials = new Credentials();
-            geocodeRequest.Credentials.ApplicationId = ((ApplicationIdCredentialsProvider)map1.CredentialsProvider).ApplicationId;
-            geocodeRequest.Query = strAddress;
-
-            // Make the asynchronous Geocode request, using the ‘waypoint index’ as 
-            //   the user state to track this request and allow it to be identified when the response is returned.
-            geocodeService.GeocodeAsync(geocodeRequest, waypointIndex);
-        }
-
-        private void geocodeService_GeocodeCompleted(object sender, GeocodeService.GeocodeCompletedEventArgs e)
-        {
-            // Retrieve the user state of this response (the ‘waypoint index’) to identify which geocode request 
-            //   it corresponds to.
-            int waypointIndex = System.Convert.ToInt32(e.UserState);
-
-            // Retrieve the GeocodeResult for this response and store it in the global variable geocodeResults, using
-            //   the waypoint index to position it in the array.
-            geocodeResults[waypointIndex] = e.Result.Results[0];
-
-            // Look at each element in the global gecodeResults array to figure out if more geocode responses still 
-            //   need to be returned.
-
-            bool doneGeocoding = true;
-
-            foreach (GeocodeService.GeocodeResult gr in geocodeResults)
-            {
-                if (gr == null)
-                {
-                    doneGeocoding = false;
-                }
-            }
-
-            // If the geocodeResults array is totally filled, then calculate the route.
-            if (doneGeocoding)
-                CalculateRoute(geocodeResults);
-
-        }
-
-        private void CalculateRoute(GeocodeService.GeocodeResult[] results)
-        {
-            // Create the service variable and set the callback method using the CalculateRouteCompleted property.
-            RouteService.RouteServiceClient routeService = new RouteService.RouteServiceClient("BasicHttpBinding_IRouteService");
-            routeService.CalculateRouteCompleted += new EventHandler<RouteService.CalculateRouteCompletedEventArgs>(routeService_CalculateRouteCompleted);
-
-            // Set the token.
-            RouteService.RouteRequest routeRequest = new RouteService.RouteRequest();
-            routeRequest.Credentials = new Credentials();
-            routeRequest.Credentials.ApplicationId = ((ApplicationIdCredentialsProvider)map1.CredentialsProvider).ApplicationId;
-
-            // Return the route points so the route can be drawn.
-            routeRequest.Options = new RouteService.RouteOptions();
-            routeRequest.Options.RoutePathType = RouteService.RoutePathType.Points;
-
-            // Set the waypoints of the route to be calculated using the Geocode Service results stored in the geocodeResults variable.
-            routeRequest.Waypoints = new System.Collections.ObjectModel.ObservableCollection<RouteService.Waypoint>();
-            foreach (GeocodeService.GeocodeResult result in results)
-            {
-           /**     var  e =new RouteService.Waypoint();
-                RouteService.Cala
-                routeRequest.Waypoints.Add(GeocodeResultToWaypoint(result));
-            }
-
-            // Make the CalculateRoute asnychronous request.
-            routeService.CalculateRouteAsync(routeRequest);
-        }**/
 
         private RouteService.Waypoint GeocodeResultToWaypoint(Location[] result)
         {
@@ -253,9 +174,9 @@ namespace View
         /// Adds the waypoint.
         /// </summary>
         /// <param name="g">The g.</param>
-        public void addWaypoint(GeoCoordinate g, string info)
+        public void addWaypoint(GeoCoordinate g, string info, int nummer)
         {
-            POI poi = new POI(g, this, info);
+            POI poi = new POI(g, this, info, nummer);
             map1.Children.Add(poi.pushpin);
         }
 
