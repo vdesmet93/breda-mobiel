@@ -40,6 +40,7 @@ namespace View
         /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void historisbutton_Click(object sender, RoutedEventArgs e)
         {
+            resetColor();
             SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
             sBrush.Color = Colors.Blue;
             ((App)Application.Current).themeColor = Colors.Blue;
@@ -53,7 +54,8 @@ namespace View
         /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void uitgangbutton_Click(object sender, RoutedEventArgs e)
         {
-            SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
+            resetColor();
+            SolidColorBrush sBrush = (SolidColorBrush)uitgangbutton.Foreground;
             sBrush.Color = Colors.Red;
             ((App)Application.Current).themeColor = Colors.Red;
             Theme = "uitgang";
@@ -66,9 +68,10 @@ namespace View
         /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void Allebutton_Click(object sender, RoutedEventArgs e)
         {
-            SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
+            resetColor();
+            SolidColorBrush sBrush = (SolidColorBrush)Allebutton.Foreground;
 
-            sBrush.Color = Colors.White;
+            sBrush.Color = Colors.Cyan;
             ((App)Application.Current).themeColor = Colors.White;
             Theme = "Alle";
         }
@@ -80,7 +83,7 @@ namespace View
         /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void okbutton_Click(object sender, RoutedEventArgs e)
         {
-            historisbutton_Click(sender, e);
+            NavigationService.Navigate(new Uri("/MapView.xaml", UriKind.Relative));
         }
 
         private void helpbutton_Click(object sender, RoutedEventArgs e)
@@ -91,6 +94,17 @@ namespace View
         private void homebutton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/MainMenu.xaml", UriKind.Relative));
+        }
+
+        private void resetColor()
+        {
+            SolidColorBrush sBrush1 = (SolidColorBrush)historisbutton.Foreground;
+            SolidColorBrush sBrush2 = (SolidColorBrush)uitgangbutton.Foreground;
+            SolidColorBrush sBrush3 = (SolidColorBrush)Allebutton.Foreground;
+            sBrush1.Color = Colors.Black;
+            sBrush2.Color = Colors.Black;
+            sBrush3.Color = Colors.Black;
+           
         }
     }
 }

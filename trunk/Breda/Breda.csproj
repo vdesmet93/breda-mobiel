@@ -195,7 +195,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="ServiceReferences.ClientConfig" />
     <None Include="Service References\SearchService\dev.wsdl" />
     <None Include="Service References\SearchService\dev.xsd">
       <SubType>Designer</SubType>
