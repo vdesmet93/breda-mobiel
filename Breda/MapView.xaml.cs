@@ -37,7 +37,7 @@ namespace View
 
                 addWaypoint(geo, row.Beschrijving);
             }
-            //geocodeResults = new GeocodeService.GeocodeResult[control.getRowCount()];
+            geocodeResults = new GeocodeService.GeocodeResult[control.getRowCount()];
              
             //Geocode("Seattle, WA" , 0);
             //Geocode("Redmond, WA" , 1);
@@ -45,7 +45,7 @@ namespace View
             
             
             
-            //GeocodeResultToWaypoint(control.getWayPoints());
+            GeocodeResultToWaypoint(control.getWayPoints());
         }
         /**
         // This method accepts a geocode query string as well as a ‘waypoint index’, which will be used to track each asynchronous geocode request.
