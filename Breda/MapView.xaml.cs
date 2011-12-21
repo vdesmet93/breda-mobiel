@@ -153,12 +153,55 @@ namespace View
         public void OnLocationChanged(GeoCoordinate l)
         {
             zoomOnLocation(l);
-            
 
+            HandleRouteChange(l);
         }
 
+        /// <summary>
+        /// recalculates route and checks if POI is reached.
+        /// </summary>
+        /// <param name="l">current location</param>
+        private void HandleRouteChange(GeoCoordinate l)
+        {
+            POI poiToUse = null;
 
+            for (int i = 0; i < Route.Count; )
+            {
+                if(Route[i].isBezocht==false)
+                {
+                    poiToUse = Route[i];
+                    break;
+                }
+                i++;
+            }
 
+            if (poiToUse == null)
+            {
+                //route is done
+            }
+            else
+            {
+                if (poiToUse.getDistance(l) < 20)
+                {
+                    //doel berrijkt
+                    poiToUse.isBezocht = true;
+                    poiToUse.showInfoScreen();
+                    recalculateRoute();
+                }
+                else
+                {
+                    recalculateRoute();
+                }
+            }
+        }
+
+        /// <summary>
+        /// recalculates the path of your current route
+        /// </summary>
+        private void recalculateRoute()
+        {
+
+        }
 
         /// <summary>
         /// zooms your map to your current locatien and adds a pushpin at your location.
