@@ -12,6 +12,8 @@ using View.RouteService;
 using View.GeocodeService;
 using Breda;
 using System.Collections.Generic;
+using System.Threading;
+using System.Windows.Threading;
 
 namespace View
 {
@@ -19,6 +21,8 @@ namespace View
     {
         internal GeocodeResult[] geocodeResults;
         private Pushpin myPushpin;
+        public bool fromto = false;
+        private Controller.Controller control;
         public Color themeColor = ((App)Application.Current).themeColor;
         public List<POI> Route;
 
@@ -29,7 +33,7 @@ namespace View
         {
             Route = new List<POI>();
             InitializeComponent();
-            Controller.Controller control = Breda.App.control;
+            control = Breda.App.control;
             control.LocationChanged +=new Controller.Controller.OnLocationChanged(OnLocationChanged);
             map1.Center = control.getLocation();
 
@@ -44,6 +48,48 @@ namespace View
             
             
             GeocodeResultToWaypoint(control.getWayPoints());
+            thickerlinetest();
+        }
+
+        public static class UIThread
+        {
+            private static readonly Dispatcher Dispatcher;
+
+            static UIThread()
+            {
+                // Store a reference to the current Dispatcher once per application
+                Dispatcher = Deployment.Current.Dispatcher;
+            }
+
+            /// <summary>
+            ///   Invokes the given action on the UI thread - if the current thread is the UI thread this will just invoke the action directly on
+            ///   the current thread so it can be safely called without the calling method being aware of which thread it is on.
+            /// </summary>
+            public static void Invoke(Action action)
+            {
+                if (Dispatcher.CheckAccess())
+                    action.Invoke();
+                else
+                    Dispatcher.BeginInvoke(action);
+            }
+        }
+
+        public void thread_start()
+        {
+            while (true)
+            {
+                fromto = true;
+                UIThread.Invoke(() => GeocodeResultToWaypoint(control.getCurLoc()));
+                //UIThread.Invoke(() => map1.Center = new GeoCoordinate(control.getLocation().Latitude, control.getLocation().Longitude));
+                //UIThread.Invoke(() => map1.ZoomLevel = 20);
+                Thread.Sleep(10000);
+            }
+        }
+
+        private void thickerlinetest()
+        {
+            Thread workerThread = new Thread(thread_start);
+            workerThread.Start();
         }
 
         private RouteService.Waypoint GeocodeResultToWaypoint(Location[] result)
@@ -100,7 +146,8 @@ namespace View
                 routeLine.Locations = new LocationCollection();
                 routeLine.Stroke = routeBrush;
                 routeLine.Opacity = 0.65;
-                routeLine.StrokeThickness = 5.0;
+                if (fromto) routeLine.StrokeThickness = 5.0;
+                else routeLine.StrokeThickness = 10.0; fromto = false;
 
                 // Retrieve the route points that define the shape of the route.
                 foreach (Location p in e.Result.Result.RoutePath.Points)
@@ -122,7 +169,7 @@ namespace View
           
 
                 // Set the map view using the rectangle which bounds the rendered route.
-               map1.SetView(rect);
+               //map1.SetView(rect);
             }
         }
 
