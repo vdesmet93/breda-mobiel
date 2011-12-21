@@ -23,6 +23,11 @@ namespace View
 
         private void ChildWindow_Closed(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void Meerbutton_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
