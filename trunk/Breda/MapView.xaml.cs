@@ -35,7 +35,7 @@ namespace View
                 GeoCoordinate geo = new GeoCoordinate() 
                         { Latitude = row.Latitude, Longitude = row.Longitude };
 
-//                addWaypoint(geo, row.Uitleg);
+                addWaypoint(geo, row.Naam, row.isUitgaan, row.Beschrijving, row.Nummer);
 
                 addWaypoint(geo, row.Uitleg, row.Nummer);
 
@@ -176,9 +176,9 @@ namespace View
         /// Adds the waypoint.
         /// </summary>
         /// <param name="g">The g.</param>
-        public void addWaypoint(GeoCoordinate g, string info, int nummer)
+        public void addWaypoint(GeoCoordinate g, string naam, bool isUitgaan, string info, int nummer)
         {
-            POI poi = new POI(g, this, info, nummer);
+            POI poi = new POI(g, this, naam, isUitgaan, info, nummer);
             map1.Children.Add(poi.pushpin);
         }
 
