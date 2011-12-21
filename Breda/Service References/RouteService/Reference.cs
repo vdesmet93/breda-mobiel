@@ -13,6 +13,7 @@
 // 
 namespace View.RouteService {
     using System.Runtime.Serialization;
+    using System.Diagnostics;
     
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1871,8 +1872,8 @@ namespace View.RouteService {
         public RouteServiceClient() {
         }
         
-        public RouteServiceClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
+        public RouteServiceClient(string endpointConfigurationName) :
+            base(endpointConfigurationName){
         }
         
         public RouteServiceClient(string endpointConfigurationName, string remoteAddress) : 
