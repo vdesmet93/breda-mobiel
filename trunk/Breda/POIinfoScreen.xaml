@@ -20,13 +20,14 @@
     <Grid x:Name="LayoutRoot"
         Background="{StaticResource PhoneChromeBrush}">
         <TextBlock Text="" Name="Textbox1"
-               TextWrapping="Wrap" />
+               TextWrapping="Wrap" Margin="0,213,0,70" />
         <Button Content="Close"
             x:Name="closeButton"
             VerticalAlignment="Bottom"
             d:LayoutOverrides="Width"
-            HorizontalAlignment="Right" Click="closeButton_Click" />
-
+            HorizontalAlignment="Right" Click="closeButton_Click" Margin="0,0,271,0" />
+        <Image Height="185" HorizontalAlignment="Left" Margin="12,22,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="356" />
+        <Button Content="Meer" Height="72" HorizontalAlignment="Left" Margin="208,607,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="Meerbutton_Click" />
     </Grid>
 
 </tk:ChildWindow>
