@@ -35,7 +35,9 @@ namespace View
                 GeoCoordinate geo = new GeoCoordinate() 
                         { Latitude = row.Latitude, Longitude = row.Longitude };
 
-                addWaypoint(geo, row.Beschrijving, row.Nummer);
+//                addWaypoint(geo, row.Uitleg);
+
+                addWaypoint(geo, row.Uitleg, row.Nummer);
 
             }
             geocodeResults = new GeocodeService.GeocodeResult[control.getRowCount()];
