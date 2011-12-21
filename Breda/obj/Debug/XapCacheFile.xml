@@ -1,10 +1,11 @@
-﻿<xapCache source="C:\Users\Vincent\Desktop\SVN\Breda\Bin\Debug\Breda.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="20-12-2011 11:41:05">
+﻿<xapCache source="C:\Users\Vincent\Desktop\SVN\Breda\Bin\Debug\Breda.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="21-12-2011 11:50:08">
   <file source="C:\Users\Vincent\Desktop\SVN\Breda\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="20-12-2011 11:41:05" />
   <file source="C:\Users\Vincent\Desktop\SVN\Breda\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="19-12-2011 14:22:43" />
   <file source="C:\Users\Vincent\Desktop\SVN\Breda\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="19-12-2011 14:22:43" />
-  <file source="C:\Users\Vincent\Desktop\SVN\Breda\obj\Debug\Breda.dll" archivePath="Breda.dll" lastWriteTime="20-12-2011 11:41:05" />
+  <file source="C:\Users\Vincent\Desktop\SVN\Breda\obj\Debug\Breda.dll" archivePath="Breda.dll" lastWriteTime="21-12-2011 11:50:06" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.Maps.dll" archivePath="Microsoft.Phone.Controls.Maps.dll" lastWriteTime="15-9-2011 16:36:26" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.dll" archivePath="System.Windows.Controls.dll" lastWriteTime="10-3-2011 0:08:16" />
+  <file source="C:\Users\Vincent\Desktop\SVN\Breda\ServiceReferences.ClientConfig" archivePath="ServiceReferences.ClientConfig" lastWriteTime="20-12-2011 13:00:53" />
   <file source="C:\Users\Vincent\Desktop\SVN\Breda\Background.png" archivePath="Background.png" lastWriteTime="12-12-2011 13:48:21" />
   <file source="C:\Users\Vincent\Desktop\SVN\Breda\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="13-12-2011 10:47:05" />
   <file source="C:\Users\Vincent\Desktop\SVN\Breda\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="20-12-2011 9:47:17" />

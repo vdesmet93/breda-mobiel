@@ -142,6 +142,27 @@ namespace View
             }
         }
 
+        // define isUitgaan
+        private bool _isUitgaan;
+
+        [Column]
+        public bool isUitgaan
+        {
+            get
+            {
+                return _isUitgaan;
+            }
+            set
+            {
+                if (_isUitgaan != value)
+                {
+                    NotifyPropertyChanging("Uitleg");
+                    _isUitgaan = value;
+                    NotifyPropertyChanged("Uitleg");
+                }
+            }
+        }
+
        #region INotifyPropertyChanged Members
 
         public event PropertyChangedEventHandler PropertyChanged;

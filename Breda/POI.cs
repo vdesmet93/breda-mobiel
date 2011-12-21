@@ -11,6 +11,8 @@ namespace View
     /// <summary>The POI class represents a POI where it holds the location, the infomation about it and what number it is in route.</summary>
     public class POI
     {
+        private bool isUitgaan;
+        private string naam;
         public String informatie { get; private set; }
         public int nummer { get; private set; }
         public Pushpin pushpin { get; private set; }
@@ -21,10 +23,12 @@ namespace View
         /// <param name="i">The exra information.</param>
         /// <param name="n">The number.</param>
         
-        public POI(GeoCoordinate g, MapView m, string info, int nummer)
+        public POI(GeoCoordinate g, MapView m, string naam, bool isUitgaan, string info, int nummer)
         {
             this.m = m;
             this.nummer = nummer;
+            this.naam = naam;
+            this.isUitgaan = isUitgaan;
             intializePushpin(g);
             informatie = info;
             this.nummer = nummer;
@@ -59,7 +63,7 @@ namespace View
 
         public void pushpinClickedEvent(object sender, MouseButtonEventArgs e)
         {
-            POIinfoScreen wnd = new POIinfoScreen(informatie);
+            POIinfoScreen wnd = new POIinfoScreen(naam, informatie);
             m.map1.Center = ((Pushpin) sender).Location;
             if (m.map1.ZoomLevel < 16)
             {

@@ -19,8 +19,11 @@
 
     <Grid x:Name="LayoutRoot"
         Background="{StaticResource PhoneChromeBrush}">
-        <TextBlock Text="" Name="Textbox1"
-               TextWrapping="Wrap" Margin="0,213,0,70" />
+        <ScrollViewer Height="449" VerticalScrollBarVisibility="Auto" Width="400">
+            <TextBox  VerticalAlignment="Top" TextWrapping="Wrap" Height="Auto" HorizontalAlignment="Left" Name="Textbox" Foreground="White" Background="Transparent" Text="TextBox" Width="400">
+
+            </TextBox>
+        </ScrollViewer>
         <Button Content="Close"
             x:Name="closeButton"
             VerticalAlignment="Bottom"

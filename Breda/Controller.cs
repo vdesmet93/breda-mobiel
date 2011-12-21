@@ -88,7 +88,7 @@ namespace Controller
         /// <summary>Fills the database with all the POI's used in the application.</summary>
         private void fillDatabase()
         {
-            DatabaseTable item = new DatabaseTable { Nummer = 1, Latitude = 51.5938D, Longitude = 4.77963D, Naam = "VVV Breda" };
+            DatabaseTable item = new DatabaseTable { Nummer = 1, Latitude = 51.5938D, Longitude = 4.77963D, Naam = "VVV Breda" , isUitgaan = false};
       //      db.databaseTables.InsertOnSubmit(item);
        //     item = new DatabaseTable { Nummer = 2, Latitude = 51.59327833333333D, Longitude = 4.779388333333333D, Naam = "Liefdeszuster" };
        //     db.databaseTables.InsertOnSubmit(item);
