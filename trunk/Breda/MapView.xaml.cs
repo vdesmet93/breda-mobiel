@@ -27,6 +27,7 @@ namespace View
         /// </summary>
         public MapView()
         {
+            Route = new List<POI>();
             InitializeComponent();
             Controller.Controller control = Breda.App.control;
             control.LocationChanged +=new Controller.Controller.OnLocationChanged(OnLocationChanged);
@@ -148,8 +149,22 @@ namespace View
         /// <summary>
         /// Called when [location changed].
         /// </summary>
-        /// <param name="l">The l.</param>
+        /// <param name="l">your current location</param>
         public void OnLocationChanged(GeoCoordinate l)
+        {
+            zoomOnLocation(l);
+            
+
+        }
+
+
+
+
+        /// <summary>
+        /// zooms your map to your current locatien and adds a pushpin at your location.
+        /// </summary>
+        /// <param name="l">current location</param>
+        public void zoomOnLocation(GeoCoordinate l)
         {
             map1.Center = l;
             map1.ZoomLevel = 17;
@@ -159,17 +174,15 @@ namespace View
             myPushpin.Content = new Ellipse()
             {
                 Fill = new SolidColorBrush(Colors.Blue),
-                StrokeThickness =0,
+                StrokeThickness = 0,
                 Opacity = .8,
                 Height = 25,
                 Width = 25
             };
             myPushpin.Location = l;
-            
-            map1.Children.Add(myPushpin);
-            
-        }
 
+            map1.Children.Add(myPushpin);
+        }
 
         /// <summary>
         /// Adds the waypoint.
