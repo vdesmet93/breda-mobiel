@@ -165,6 +165,18 @@ namespace Controller
             }
             return locations;
         }
+
+        public Location[] getCurLoc()
+        {
+            Location[] loc = new Location[2];
+            loc[0] = new Location();
+            loc[0].Latitude = getLocation().Latitude;
+            loc[0].Longitude = getLocation().Longitude;
+            loc[1] = new Location();
+            loc[1].Latitude = 51.58775;
+            loc[1].Longitude = 4.78125;
+            return loc;
+        }
         /// <summary>Handles the StatusChanged event of the watcher control.</summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="System.Device.Location.GeoPositionStatusChangedEventArgs"/> instance containing the event data.</param>
@@ -246,7 +258,6 @@ namespace Controller
             l.Latitude = latitude;
             l.Longitude = longtitude;
             return l;
-
         }
 
         /// <summary>Returns the FileManager which handles FileIO.</summary>
