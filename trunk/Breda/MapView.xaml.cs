@@ -11,14 +11,16 @@ using System.Device.Location;
 using View.RouteService;
 using View.GeocodeService;
 using Breda;
+using System.Collections.Generic;
 
 namespace View
 {
     public partial class MapView : PhoneApplicationPage
     {
-        internal GeocodeService.GeocodeResult[] geocodeResults;
+        internal GeocodeResult[] geocodeResults;
         private Pushpin myPushpin;
         public Color themeColor = ((App)Application.Current).themeColor;
+        public List<POI> Route;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MapView"/> class.
@@ -36,9 +38,6 @@ namespace View
                         { Latitude = row.Latitude, Longitude = row.Longitude };
 
                 addWaypoint(geo, row.Naam, row.isUitgaan, row.Beschrijving, row.Nummer);
-
-                addWaypoint(geo, row.Uitleg, row.Nummer);
-
             }
             geocodeResults = new GeocodeService.GeocodeResult[control.getRowCount()];
             
@@ -180,7 +179,7 @@ namespace View
         {
             POI poi = new POI(g, this, naam, isUitgaan, info, nummer);
             map1.Children.Add(poi.pushpin);
+            Route.Add(poi);
         }
-
     }
 }
