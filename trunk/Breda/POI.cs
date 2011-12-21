@@ -12,7 +12,7 @@ namespace View
     public class POI
     {
         private bool isUitgaan;
-        public bool isBezocht = false{get;set;}
+        public bool isBezocht{ get; set; }
         private string naam;
         public String informatie { get; private set; }
         public int nummer { get; private set; }
@@ -26,6 +26,7 @@ namespace View
         
         public POI(GeoCoordinate g, MapView m, string naam, bool isUitgaan, string info, int nummer)
         {
+            isBezocht = false;
             this.m = m;
             this.nummer = nummer;
             this.naam = naam;
@@ -63,15 +64,20 @@ namespace View
             pushpin.MouseLeftButtonUp += pushpinClickedEvent;
         }
 
-        public void pushpinClickedEvent(object sender, MouseButtonEventArgs e)
+        public void showInfoScreen()
         {
             POIinfoScreen wnd = new POIinfoScreen(naam, informatie);
+            wnd.Show();
+        }
+
+        public void pushpinClickedEvent(object sender, MouseButtonEventArgs e)
+        {
+            showInfoScreen();
             m.map1.Center = ((Pushpin) sender).Location;
             if (m.map1.ZoomLevel < 16)
             {
                 m.map1.ZoomLevel = 16;
             };
-            wnd.Show();
         }
 
         public Double getDistance(GeoCoordinate g)
