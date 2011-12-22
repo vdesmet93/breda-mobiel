@@ -33,6 +33,10 @@ namespace View
             this.isUitgaan = isUitgaan;
             intializePushpin(g);
             informatie = info;
+            if (String.IsNullOrEmpty(informatie))
+            { informatie = naam + "\n \n" + "geen informatie beschikbaar, klik op meer voor informatie op het internet"; }
+            else
+            { informatie = naam + "\n \n" + informatie; }
             this.nummer = nummer;
             Debug.WriteLine(nummer);
         }

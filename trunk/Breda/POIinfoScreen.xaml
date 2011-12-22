@@ -20,7 +20,7 @@
     <Grid x:Name="LayoutRoot"
         Background="{StaticResource PhoneChromeBrush}">
         <ScrollViewer Height="449" VerticalScrollBarVisibility="Auto" Width="400">
-            <TextBox  VerticalAlignment="Top" TextWrapping="Wrap" Height="Auto" HorizontalAlignment="Left" Name="Textbox" Foreground="White" Background="Transparent" Text="TextBox" Width="400">
+            <TextBox  VerticalAlignment="Top" TextWrapping="Wrap" Height="Auto" HorizontalAlignment="Left" Name="Textbox" Foreground="White" Background="Transparent" Text="TextBox" Width="370">
 
             </TextBox>
         </ScrollViewer>
@@ -28,9 +28,9 @@
             x:Name="closeButton"
             VerticalAlignment="Bottom"
             d:LayoutOverrides="Width"
-            HorizontalAlignment="Right" Click="closeButton_Click" Margin="0,0,271,0" />
+            HorizontalAlignment="Right" Click="closeButton_Click" Margin="0,0,197,0" Width="183" />
         <Image Height="185" HorizontalAlignment="Left" Margin="12,22,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="356" />
-        <Button Content="Meer" Height="72" HorizontalAlignment="Left" Margin="208,607,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="Meerbutton_Click" />
+        <Button Content="Meer" Height="72" HorizontalAlignment="Left" Margin="189,607,0,0" Name="button1" VerticalAlignment="Top" Width="179" Click="Meerbutton_Click" />
     </Grid>
 
 </tk:ChildWindow>
