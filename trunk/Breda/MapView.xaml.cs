@@ -42,13 +42,13 @@ namespace View
                 GeoCoordinate geo = new GeoCoordinate() 
                         { Latitude = row.Latitude, Longitude = row.Longitude };
 
-                addWaypoint(geo, row.Naam, row.isUitgaan, row.Beschrijving, row.Nummer);
+                addWaypoint(geo, row.Naam, row.isUitgaan, row.Uitleg, row.Nummer);
             }
             geocodeResults = new GeocodeService.GeocodeResult[control.getRowCount()];
             
             
             GeocodeResultToWaypoint(control.getWayPoints());
-            thickerlinetest();
+      //      thickerlinetest();
         }
 
         public static class UIThread
