@@ -42,7 +42,7 @@ namespace View
                 
                 GeoCoordinate geo = new GeoCoordinate() 
                         { Latitude = row.Latitude, Longitude = row.Longitude };
-                addWaypoint(geo, row.Naam, row.isUitgaan, row.Uitleg, row.Nummer);
+                addWaypoint(geo, row.Naam, row.isUitgaan, row.Uitleg, row.Nummer,row.Foto);
             }
             geocodeResults = new GeocodeService.GeocodeResult[control.getRowCount()];
             
@@ -279,9 +279,9 @@ namespace View
         /// Adds the waypoint.
         /// </summary>
         /// <param name="g">The g.</param>
-        public void addWaypoint(GeoCoordinate g, string naam, bool isUitgaan, string info, int nummer)
+        public void addWaypoint(GeoCoordinate g, string naam, bool isUitgaan, string info, int nummer,int foto)
         {
-            POI poi = new POI(g, this, naam, isUitgaan, info, nummer);
+            POI poi = new POI(g, this, naam, isUitgaan, info, nummer,foto);
             map1.Children.Add(poi.pushpin);
             Route.Add(poi);
         }

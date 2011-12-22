@@ -11,6 +11,7 @@ namespace View
     /// <summary>The POI class represents a POI where it holds the location, the infomation about it and what number it is in route.</summary>
     public class POI
     {
+        public int foto { get; private set; }
         private bool isUitgaan;
         public bool isBezocht{ get; set; }
         private string naam;
@@ -24,15 +25,16 @@ namespace View
         /// <param name="i">The exra information.</param>
         /// <param name="n">The number.</param>
         
-        public POI(GeoCoordinate g, MapView m, string naam, bool isUitgaan, string info, int nummer)
+        public POI(GeoCoordinate g, MapView m, string naam, bool isUitgaan, string info, int nummer,int foto)
         {
             isBezocht = false;
             this.m = m;
             this.nummer = nummer;
             this.naam = naam;
             this.isUitgaan = isUitgaan;
+            this.foto = foto;
             intializePushpin(g);
-            informatie = info;
+            informatie = info ?? "";
             if (String.IsNullOrEmpty(informatie))
             { informatie = naam + "\n \n" + "geen informatie beschikbaar, klik op meer voor informatie op het internet"; }
             else
@@ -81,7 +83,7 @@ namespace View
 
         public void showInfoScreen()
         {
-            POIinfoScreen wnd = new POIinfoScreen(naam, informatie);
+            POIinfoScreen wnd = new POIinfoScreen( this.foto,this.naam, this.informatie);
             wnd.Show();
         }
 
