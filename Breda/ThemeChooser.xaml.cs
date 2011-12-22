@@ -58,7 +58,7 @@ namespace View
             SolidColorBrush sBrush = (SolidColorBrush)uitgangbutton.Foreground;
             sBrush.Color = Colors.Red;
             ((App)Application.Current).themeColor = Colors.Red;
-            Theme = "uitgang";
+            Theme = "uitgaan";
         }
 
         /// <summary>

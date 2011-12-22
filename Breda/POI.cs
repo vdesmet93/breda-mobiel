@@ -47,19 +47,30 @@ namespace View
             pushpin.Location = g;
             pushpin.Template = null;
             Color a;
+            Color b;
             if(m.themeColor == Colors.White)
             {
-                a = Colors.Black;
+                a = Colors.Cyan;
             }
             else
             {
-                a = m.themeColor;
+                if (m.themeColor == Colors.Red && isUitgaan)
+                { a = m.themeColor;}
+                else if (m.themeColor == Colors.Blue && !isUitgaan)
+                { a = m.themeColor;  }
+                else
+                { a = Color.FromArgb(250, 150, 150, 150); }   
+            }
+            b = a;
+            if (isBezocht)
+            {
+                b.R -= 60; b.G -= 60; b.B -= 60;
             }
 
             pushpin.Content = new Ellipse()
             {
                 Fill = new SolidColorBrush(a),
-                Stroke = new SolidColorBrush(a),
+                Stroke = new SolidColorBrush(b),
                 StrokeThickness = 5,
                 Opacity = .8,
                 Height = 20,
