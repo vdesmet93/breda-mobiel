@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using Microsoft.Phone.Tasks;
 using System.Windows.Navigation;
+using System.Windows.Media.Imaging;
 
 namespace View
 {
@@ -13,10 +14,16 @@ namespace View
         private String naam;
         public string HostName { get; set; }
 
-        public POIinfoScreen(string naam, String info)
+        public POIinfoScreen(int imageID,string naam, String info)
         {
-            if (info == null) info = String.Empty;
             InitializeComponent();
+            if (info == null) info = String.Empty;
+            if (imageID > 0)
+            {
+                BitmapImage img = new BitmapImage(new Uri(String.Format("/Photos/{0}.jpg", imageID), UriKind.Relative));
+                image1.Source = img;
+            }
+           // InitializeComponent();
             this.naam = naam;
             Textbox.Text = info;
         }

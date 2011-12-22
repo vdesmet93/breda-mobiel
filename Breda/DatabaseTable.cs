@@ -162,6 +162,26 @@ namespace View
                 }
             }
         }
+        // define Foto
+        private int _Foto;
+
+        [Column]
+        public int Foto
+        {
+            get
+            {
+                return _Foto;
+            }
+            set
+            {
+                if (_Foto != value)
+                {
+                    NotifyPropertyChanging("Foto");
+                    _Foto = value;
+                    NotifyPropertyChanged("Foto");
+                }
+            }
+        }
 
        #region INotifyPropertyChanged Members
 
