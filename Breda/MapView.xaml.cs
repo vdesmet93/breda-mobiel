@@ -39,9 +39,9 @@ namespace View
 
             foreach (DatabaseTable row in control.DatabaseTables)
             {
+                
                 GeoCoordinate geo = new GeoCoordinate() 
                         { Latitude = row.Latitude, Longitude = row.Longitude };
-
                 addWaypoint(geo, row.Naam, row.isUitgaan, row.Uitleg, row.Nummer);
             }
             geocodeResults = new GeocodeService.GeocodeResult[control.getRowCount()];
@@ -152,6 +152,7 @@ namespace View
                 // Retrieve the route points that define the shape of the route.
                 foreach (Location p in e.Result.Result.RoutePath.Points)
                 {
+
                     routeLine.Locations.Add(new GeoCoordinate(p.Latitude, p.Longitude));
                 }
 
