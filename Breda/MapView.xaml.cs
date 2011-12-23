@@ -36,19 +36,16 @@ namespace View
             control = Breda.App.control;
             control.LocationChanged +=new Controller.Controller.OnLocationChanged(OnLocationChanged);
             map1.Center = control.getLocation();
+            map1.ZoomLevel = 20;
 
             foreach (DatabaseTable row in control.DatabaseTables)
             {
-                
                 GeoCoordinate geo = new GeoCoordinate() 
                         { Latitude = row.Latitude, Longitude = row.Longitude };
                 addWaypoint(geo, row.Naam, row.isUitgaan, row.Uitleg, row.Nummer,row.Foto);
             }
             geocodeResults = new GeocodeService.GeocodeResult[control.getRowCount()];
-            
-            
             GeocodeResultToWaypoint(control.getWayPoints());
-      //      thickerlinetest();
         }
 
         public static class UIThread
@@ -74,24 +71,6 @@ namespace View
             }
         }
 
-        public void thread_start()
-        {
-            while (true)
-            {
-                fromto = true;
-                UIThread.Invoke(() => GeocodeResultToWaypoint(control.getCurLoc()));
-                //UIThread.Invoke(() => map1.Center = new GeoCoordinate(control.getLocation().Latitude, control.getLocation().Longitude));
-                //UIThread.Invoke(() => map1.ZoomLevel = 20);
-                Thread.Sleep(10000);
-            }
-        }
-
-        private void thickerlinetest()
-        {
-            Thread workerThread = new Thread(thread_start);
-            workerThread.Start();
-        }
-
         private RouteService.Waypoint GeocodeResultToWaypoint(Location[] result)
         {
             // Create the service variable and set the callback method using the CalculateRouteCompleted property.
@@ -113,10 +92,7 @@ namespace View
             {
                 Waypoint point = new RouteService.Waypoint();
                 point.Location = l;
-                
                 routeRequest.Waypoints.Add(point);
-
-
                 geocodeResults[i] = new GeocodeResult();
                 View.GeocodeService.GeocodeLocation loc = new View.GeocodeService.GeocodeLocation();
                 loc.Latitude = l.Latitude;
@@ -124,18 +100,13 @@ namespace View
                 geocodeResults[i].Locations = new System.Collections.ObjectModel.ObservableCollection<GeocodeService.GeocodeLocation>();
                 geocodeResults[i].Locations.Add(loc);
                 i++;
-                
             }
-
-            
             routeService.CalculateRouteAsync(routeRequest);
-
             return null;
         }
 
         private void routeService_CalculateRouteCompleted(object sender, RouteService.CalculateRouteCompletedEventArgs e)
         {
-
             // If the route calculate was a success and contains a route, then draw the route on the map.
             if ((e.Result.ResponseSummary.StatusCode == RouteService.ResponseStatusCode.Success) & (e.Result.Result.Legs.Count != 0))
             {
@@ -145,32 +116,28 @@ namespace View
                 MapPolyline routeLine = new MapPolyline();
                 routeLine.Locations = new LocationCollection();
                 routeLine.Stroke = routeBrush;
-                routeLine.Opacity = 0.65;
-                if (fromto) routeLine.StrokeThickness = 5.0;
-                else routeLine.StrokeThickness = 10.0; fromto = false;
-
-                // Retrieve the route points that define the shape of the route.
+                if (fromto)
+                {
+                    routeLine.StrokeThickness = 10.0;
+                    routeLine.Opacity = 1.0;
+                    map1.Children.RemoveAt(map1.Children.Count - 2);
+                    fromto = false;
+                }
+                else
+                {
+                    routeLine.StrokeThickness = 5.0;
+                    routeLine.Opacity = 0.65;
+                }
+                // Retrieve the route points that defines the shape of the route.
                 foreach (Location p in e.Result.Result.RoutePath.Points)
                 {
-
                     routeLine.Locations.Add(new GeoCoordinate(p.Latitude, p.Longitude));
                 }
-
                 // Add a map layer in which to draw the route.
                 MapLayer myRouteLayer = new MapLayer();
                 map1.Children.Add(myRouteLayer);
-
                 // Add the route line to the new layer.
                 myRouteLayer.Children.Add(routeLine);
-
-                // Figure the rectangle which encompasses the route. This is used later to set the map view.
-
-                LocationRect rect = new LocationRect(new GeoCoordinate(routeLine.Locations[0].Latitude, routeLine.Locations[0].Longitude), 10, 10);
-
-          
-
-                // Set the map view using the rectangle which bounds the rendered route.
-               //map1.SetView(rect);
             }
         }
 
@@ -201,7 +168,6 @@ namespace View
         public void OnLocationChanged(GeoCoordinate l)
         {
             zoomOnLocation(l);
-
             HandleRouteChange(l);
         }
 
@@ -215,7 +181,7 @@ namespace View
 
             for (int i = 0; i < Route.Count; )
             {
-                if(Route[i].isBezocht==false)
+                if(!Route[i].isBezocht)
                 {
                     poiToUse = Route[i];
                     break;
@@ -234,21 +200,13 @@ namespace View
                     //doel berrijkt
                     poiToUse.isBezocht = true;
                     poiToUse.showInfoScreen();
-                    recalculateRoute();
                 }
                 else
                 {
-                    recalculateRoute();
+                    fromto = true;
+                    GeocodeResultToWaypoint(control.getRouteToNextPOI(poiToUse));
                 }
             }
-        }
-
-        /// <summary>
-        /// recalculates the path of your current route
-        /// </summary>
-        private void recalculateRoute()
-        {
-
         }
 
         /// <summary>
@@ -271,7 +229,6 @@ namespace View
                 Width = 25
             };
             myPushpin.Location = l;
-
             map1.Children.Add(myPushpin);
         }
 

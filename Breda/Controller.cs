@@ -166,15 +166,15 @@ namespace Controller
             return locations;
         }
 
-        public Location[] getCurLoc()
+        public Location[] getRouteToNextPOI(POI nextPOI)
         {
             Location[] loc = new Location[2];
             loc[0] = new Location();
             loc[0].Latitude = getLocation().Latitude;
             loc[0].Longitude = getLocation().Longitude;
             loc[1] = new Location();
-            loc[1].Latitude = 51.58775;
-            loc[1].Longitude = 4.78125;
+            loc[1].Latitude = nextPOI.latitude;
+            loc[1].Longitude = nextPOI.longitude;
             return loc;
         }
         /// <summary>Handles the StatusChanged event of the watcher control.</summary>
