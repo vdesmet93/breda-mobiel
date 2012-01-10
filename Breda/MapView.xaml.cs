@@ -210,7 +210,7 @@ namespace View
         }
 
         /// <summary>
-        /// zooms your map to your current locatien and adds a pushpin at your location.
+        /// zooms your map to your current location and adds a pushpin at your location.
         /// </summary>
         /// <param name="l">current location</param>
         public void zoomOnLocation(GeoCoordinate l)
@@ -222,7 +222,7 @@ namespace View
             myPushpin.Template = null;
             myPushpin.Content = new Ellipse()
             {
-                Fill = new SolidColorBrush(Colors.Blue),
+                Fill = new SolidColorBrush(Colors.Red),
                 StrokeThickness = 0,
                 Opacity = .8,
                 Height = 25,
