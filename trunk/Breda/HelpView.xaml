@@ -14,29 +14,23 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+    <Grid x:Name="LayoutRoot"
+        Background="{StaticResource PhoneChromeBrush}">
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+        <StackPanel x:Name="TitlePanel" Margin="12,17,-14,28">
             <TextBlock x:Name="ApplicationTitle" Text="Breda Mobiel" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock x:Name="PageTitle" Text="Help" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button Content="Home" Height="72" HorizontalAlignment="Left" Margin="296,529,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
-            <Button Content="Terug" Height="72" HorizontalAlignment="Left" Margin="6,529,0,0" Name="button2" VerticalAlignment="Top" Width="160" Click="button2_Click" />
-            <ScrollViewer Height="449" VerticalScrollBarVisibility="Auto" Width="400"></ScrollViewer>
-        </Grid>
 
-        
-        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Name="Textbox" Foreground="White" Text="" Width="450" Margin="18,0,0,79" Grid.Row="1">
-                Welkom bij de helpfunctie van  Breda Mobiel <LineBreak /> 
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="12,198,12,90">
+
+
+            <TextBlock Text="" Name="Textbox1"
+               TextWrapping="Wrap" Margin="0,0,0,0" Height="Auto" Width="416">
+             Welkom bij de helpfunctie van  Breda Mobiel <LineBreak /> 
                 <LineBreak />
                 Met Breda Mobiel zal U naar de hoogte punten 
                 van Breda worden geleid. En zal U deze zelf 
@@ -50,7 +44,12 @@
                 Indien U informatie wenst over een bezienswaardigheid 
                 op de route kunt u deze aanklikken op de kaart. <LineBreak />
                <LineBreak />
-                Breda Mobiel wenst U een prettig verkenning. <LineBreak /></TextBlock>
+                Breda Mobiel wenst U een prettig verkenning. <LineBreak />
+
+
+            </TextBlock>
+        </ScrollViewer>
+        <Button Content="Back" Height="72" HorizontalAlignment="Left" Margin="24,684,0,0" Name="button1" VerticalAlignment="Top" Width="444" Click="button1_Click_1" />
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->

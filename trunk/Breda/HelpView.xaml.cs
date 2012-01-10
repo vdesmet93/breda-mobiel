@@ -38,7 +38,8 @@ namespace View
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
-        private void button2_Click(object sender, RoutedEventArgs e)
+
+        private void button1_Click_1(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
         }
