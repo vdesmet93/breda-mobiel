@@ -40,8 +40,8 @@ namespace View
         /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void historisbutton_Click(object sender, RoutedEventArgs e)
         {
-            resetColor();
-            SolidColorBrush sBrush = (SolidColorBrush)historisbutton.Foreground;
+          //  resetColor();
+            SolidColorBrush sBrush = (SolidColorBrush)Foreground;
             sBrush.Color = Colors.Blue;
             ((App)Application.Current).themeColor = Colors.Blue;
             Theme = "historis";
@@ -54,8 +54,8 @@ namespace View
         /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void uitgangbutton_Click(object sender, RoutedEventArgs e)
         {
-            resetColor();
-            SolidColorBrush sBrush = (SolidColorBrush)uitgangbutton.Foreground;
+         //   resetColor();
+            SolidColorBrush sBrush = (SolidColorBrush)Foreground;
             sBrush.Color = Colors.Red;
             ((App)Application.Current).themeColor = Colors.Red;
             Theme = "uitgaan";
@@ -68,8 +68,8 @@ namespace View
         /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void Allebutton_Click(object sender, RoutedEventArgs e)
         {
-            resetColor();
-            SolidColorBrush sBrush = (SolidColorBrush)Allebutton.Foreground;
+           // resetColor();
+            SolidColorBrush sBrush = (SolidColorBrush)Foreground;
 
             sBrush.Color = Colors.Cyan;
             ((App)Application.Current).themeColor = Colors.White;
@@ -98,12 +98,12 @@ namespace View
 
         private void resetColor()
         {
-            SolidColorBrush sBrush1 = (SolidColorBrush)historisbutton.Foreground;
-            SolidColorBrush sBrush2 = (SolidColorBrush)uitgangbutton.Foreground;
-            SolidColorBrush sBrush3 = (SolidColorBrush)Allebutton.Foreground;
-            sBrush1.Color = Colors.Black;
-            sBrush2.Color = Colors.Black;
-            sBrush3.Color = Colors.Black;
+            //SolidColorBrush sBrush1 = (SolidColorBrush)historisbutton.Foreground;
+            //SolidColorBrush sBrush2 = (SolidColorBrush)uitgangbutton.Foreground;
+            //SolidColorBrush sBrush3 = (SolidColorBrush)Allebutton.Foreground;
+            //sBrush1.Color = Colors.Black;
+            //sBrush2.Color = Colors.Black;
+            //sBrush3.Color = Colors.Black;
            
         }
     }

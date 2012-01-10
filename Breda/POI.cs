@@ -71,15 +71,16 @@ namespace View
             b = a;
             if (isBezocht)
             {
-                b.R -= 60; b.G -= 60; b.B -= 60;
+                b.R -= 160; b.G -= 160; b.B -= 160;
             }
             pushpin.Content = new Ellipse()
             {
-                Fill = new SolidColorBrush(b),
+                Fill = new SolidColorBrush(a),
+                Stroke = new SolidColorBrush(b),
                 StrokeThickness = 5,
                 Opacity = .8,
-                Height = 20,
-                Width = 20
+                Height = 30,
+                Width = 30
             };
             pushpin.MouseLeftButtonUp += pushpinClickedEvent;
         }
