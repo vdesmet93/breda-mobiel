@@ -19,7 +19,6 @@ namespace Breda
 {
     public partial class App : Application
     {
-        View.SplashScreen splashScreen;
         public Color themeColor { get; set; }
 
         public static Controller.Controller control { get; private set; }
@@ -77,9 +76,9 @@ namespace Breda
         /// <param name="e">The <see cref="Microsoft.Phone.Shell.LaunchingEventArgs"/> instance containing the event data.</param>
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
-            splashScreen = new View.SplashScreen();
+            //splashScreen = new View.SplashScreen();
             control = new Controller.Controller(this);
-            splashScreen = new View.SplashScreen();
+        //    splashScreen = new View.SplashScreen();
             
         }
 
