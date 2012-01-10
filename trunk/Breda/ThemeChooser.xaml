@@ -28,7 +28,7 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <Button Content="Historisch" Height="94" HorizontalAlignment="Left" Margin="102,93,0,0" Name="historisbutton" VerticalAlignment="Top" Width="248" Click="historisbutton_Click" Background="White"  Foreground="Black" BorderBrush="Red" BorderThickness="8"/>
-            <Button Content="Uitgang" Height="94" HorizontalAlignment="Left" Margin="128,174,0,0" Name="uitgangbutton" VerticalAlignment="Top" Width="196" Click="uitgangbutton_Click" Background="White"  Foreground="Black" BorderBrush="Red" BorderThickness="8"/>
+            <Button Content="Uitgaan" Height="94" HorizontalAlignment="Left" Margin="128,174,0,0" Name="uitgangbutton" VerticalAlignment="Top" Width="196" Click="uitgangbutton_Click" Background="White"  Foreground="Black" BorderBrush="Red" BorderThickness="8"/>
             <Button Content="Ok" Height="94" HorizontalAlignment="Left" Margin="180,388,0,0" Name="okbutton" VerticalAlignment="Top" Width="104" Click="okbutton_Click" Background="White"  Foreground="Black" BorderBrush="Red" BorderThickness="8"/>
             <Button Content="Alle punten" Height="94" HorizontalAlignment="Left" Margin="128,254,0,0" Name="Allebutton" VerticalAlignment="Top" Width="196" Click="Allebutton_Click" Background="White"  Foreground="Black" BorderBrush="Red" BorderThickness="8"/>
         </Grid>
