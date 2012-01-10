@@ -25,6 +25,8 @@ namespace View
         private Controller.Controller control;
         public Color themeColor = ((App)Application.Current).themeColor;
         public List<POI> Route;
+        public Boolean GotLocation = false;
+        POIinfoScreen wnd = new POIinfoScreen(0, "NoClose", "Localizatie van gebruik \n even gedult A.U.B.");
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MapView"/> class.
@@ -46,6 +48,8 @@ namespace View
             }
             geocodeResults = new GeocodeService.GeocodeResult[control.getRowCount()];
             GeocodeResultToWaypoint(control.getWayPoints());
+            wnd.Show();
+            
         }
 
         public static class UIThread
@@ -167,6 +171,8 @@ namespace View
         /// <param name="l">your current location</param>
         public void OnLocationChanged(GeoCoordinate l)
         {
+            GotLocation = true;
+            wnd.Close();
             zoomOnLocation(l);
             HandleRouteChange(l);
         }
@@ -181,7 +187,7 @@ namespace View
 
             for (int i = 0; i < Route.Count; )
             {
-                if(!Route[i].isBezocht)
+                if (!Route[i].isBezocht)
                 {
                     poiToUse = Route[i];
                     break;

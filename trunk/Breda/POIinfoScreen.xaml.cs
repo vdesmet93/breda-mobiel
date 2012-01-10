@@ -26,6 +26,10 @@ namespace View
            // InitializeComponent();
             this.naam = naam;
             Textbox.Text = info;
+            if(naam.Equals("NoClose"))
+            {
+                closeButton.Width=0;
+            }
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
