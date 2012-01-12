@@ -15,6 +15,7 @@ using System.Linq;
 using Microsoft.Phone.Controls.Maps;
 using View;
 using Microsoft.Phone.Controls.Maps.Platform;
+using System.Threading;
 
 namespace Controller
 {
@@ -68,6 +69,7 @@ namespace Controller
             watcher.PositionChanged += this.watcher_PositionChanged;
             watcher.StatusChanged += this.watcher_StatusChanged;
             watcher.Start();
+
             // Create the database if it does not exist.
             db = new Database();
             //Create the database if necessary
@@ -84,6 +86,7 @@ namespace Controller
             text += String.Format("{0}, {1}, {2}, {3} \n", DatabaseTables[1].Nummer, DatabaseTables[1].Longitude, DatabaseTables[1].Latitude, DatabaseTables[1].Naam);
             text += String.Format("{0}, {1}, {2}, {3}", DatabaseTables[2].Nummer, DatabaseTables[2].Longitude, DatabaseTables[2].Latitude, DatabaseTables[2].Naam);
         }
+
 
         /// <summary>Fills the database with all the POI's used in the application.</summary>
         private void fillDatabase()

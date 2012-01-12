@@ -26,7 +26,7 @@ namespace View
         public Color themeColor = ((App)Application.Current).themeColor;
         public List<POI> Route;
         public Boolean GotLocation = false;
-        POIinfoScreen wnd = new POIinfoScreen(0, "NoClose", "Localizatie van gebruik \n even gedult A.U.B.");
+        POIinfoScreen wnd = new POIinfoScreen(0, "NoClose", "Er is nog geen GPS-fix gevonden. De applicatie is druk bezig om een nauwkeurige locatie te krijgen.\n even geduld A.U.B.");
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MapView"/> class.
